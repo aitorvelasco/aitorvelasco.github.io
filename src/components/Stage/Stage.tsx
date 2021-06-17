@@ -1,69 +1,73 @@
 import Image from 'next/image'
-import styled from 'styled-components'
 
 import { CVInfo } from '../../data'
-import { H2, H3 } from  '../../../styles/theme'
+import { greyPalette } from '../../../styles/theme'
 
-const CompanyLogo = styled.span`
-  padding-left: 16px;
-  position: relative;
-`
+import { Box, Link, Grid, Typography, makeStyles } from '@material-ui/core'
 
-const StageListItem = styled.li`
-  padding: 8px 0;
-  &:not(:last-of-type) {
-    border-bottom: 2px solid #e0e0e0;
-  }
-`
-
-const ProjectList = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-`
-
-const ProjectListItem = styled.li`
-  padding: 16px;
-  & img {
-    transition: transform 0.5s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-`
+const useStyles = makeStyles({
+  stageListItem: {
+    padding: '8px 0',
+    '&:not(:last-of-type)': {
+      borderBottom: `2px solid ${greyPalette}`,
+    },
+  },
+  projectList: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    padding: 0,
+  },
+  projectListItem: {
+    padding: '16px',
+    '& img': {
+      transition: 'transform 0.5s',
+      '&:hover': {
+        transform: 'scale(1.1)',
+      },
+    },
+  },
+})
 
 const Stage = () => {
+  const { stageListItem, projectList, projectListItem } = useStyles()
   return (
     <ul>
       {CVInfo.map((stage) => {
         const { company, logo, time, projects } = stage
         return (
-          <StageListItem key={company}>
-            <H2>{company}</H2>
-            <CompanyLogo>
+          <Grid container className={stageListItem} key={company}>
+            <Typography variant="h4" component="h2">
+              {company}
+            </Typography>
+            {/* <Box position="relative" pl={4}>
               <Image src={`/portfolio/${logo}`} layout="fill" />
-            </CompanyLogo>
-            <p>{time}</p>
-            <ProjectList>
+            </Box> */}
+            <Typography variant="caption" display="block" color="textSecondary">
+              {time}
+            </Typography>
+            <Grid container item className={projectList}>
               {projects.map((project) => {
                 const { name, description, image, url } = project
                 return (
-                  <ProjectListItem key={name}>
-                    <H3>{name}</H3>
-                    {image && url && (
-                      <a href={url} target="_blank">
+                  <Grid item className={projectListItem} key={name}>
+                    <Typography variant="h5" component="h3">
+                      {name}
+                    </Typography>
+                    {image && (
+                      <Link href={url} target="_blank">
                         <Image
                           src={`/portfolio/${image}`}
                           width="1280"
                           height="640"
                         />
-                      </a>
+                      </Link>
                     )}
-                    <p>{description}</p>
-                  </ProjectListItem>
+                    <Typography>{description}</Typography>
+                  </Grid>
                 )
               })}
-            </ProjectList>
-          </StageListItem>
+            </Grid>
+          </Grid>
         )
       })}
     </ul>

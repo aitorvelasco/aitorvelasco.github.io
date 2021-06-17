@@ -1,19 +1,12 @@
 import { Header, Stage } from '../src/components'
-
-import styled from 'styled-components'
-
-const Main = styled.main`
-    max-width: 1200px;
-    margin: auto;
-    padding: 16px 0;
-`
+import { Box } from '@material-ui/core'
 
 const Home =() => {
   return (
-    <Main>
+    <Box maxWidth="1200" m="auto" p={4} bgcolor="#FFF" borderRadius={10} boxShadow="0px 3px 10px black">
       <Header />
       <Stage />
-    </Main>
+    </Box>
   )
 }
 
