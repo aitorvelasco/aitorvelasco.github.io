@@ -1,9 +1,11 @@
 import Image from 'next/image'
 
-import { CVInfo } from '../../data'
+import { Box, Link, Grid, Typography, makeStyles } from '@material-ui/core'
+
+import { Job, Project } from '../../model'
 import { greyPalette } from '../../../styles/theme'
 
-import { Box, Link, Grid, Typography, makeStyles } from '@material-ui/core'
+import profilePic from '../../../public/its-a-me.jpg'
 
 const useStyles = makeStyles({
   stageListItem: {
@@ -28,37 +30,41 @@ const useStyles = makeStyles({
   },
 })
 
-const Stage = () => {
+const Stage = ({ jobs }) => {
   const { stageListItem, projectList, projectListItem } = useStyles()
   return (
     <ul>
-      {CVInfo.map((stage) => {
-        const { company, logo, time, projects } = stage
+      {jobs.map((job: Job) => {
+        const { company, logo, time, projects } = job
         return (
           <Grid container className={stageListItem} key={company}>
             <Typography variant="h4" component="h2">
               {company}
             </Typography>
-            {/* <Box position="relative" pl={4}>
-              <Image src={`/portfolio/${logo}`} layout="fill" />
-            </Box> */}
+            <Box position="relative" pl={4}>
+              <Image src={`https:${logo.fields.file.url}`} alt={company} layout="fill" />
+            </Box>
             <Typography variant="caption" display="block" color="textSecondary">
               {time}
             </Typography>
             <Grid container item className={projectList}>
               {projects.map((project) => {
-                const { name, description, image, url } = project
+                const projectFields: Project = project.fields
+                const { name, description, imagePreview, url } = projectFields
                 return (
                   <Grid item className={projectListItem} key={name}>
                     <Typography variant="h5" component="h3">
                       {name}
                     </Typography>
-                    {image && (
+                    {imagePreview && (
                       <Link href={url} target="_blank">
                         <Image
-                          src={`/portfolio/${image}`}
+                          src={`https:${imagePreview.fields.file.url}`}
                           width="1280"
                           height="640"
+                          placeholder="blur"
+                          blurDataURL={profilePic}
+                          alt={name}
                         />
                       </Link>
                     )}
@@ -71,7 +77,7 @@ const Stage = () => {
         )
       })}
     </ul>
-  )
+)
 }
 
 export default Stage

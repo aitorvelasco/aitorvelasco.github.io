@@ -4,6 +4,8 @@ import { Box, makeStyles } from '@material-ui/core'
 
 import { bluePalette } from '../../../styles/theme'
 
+import profilePic from '../../../public/its-a-me.jpg'
+
 const useStyles = makeStyles({
   "@keyframes morphing": {
     "50%": {
@@ -26,10 +28,11 @@ const Header = () => {
         <Box display="flex" justifyContent="center">
         <Image
           className={me}
-          src="/its-a-me.jpeg"
+          src={profilePic}
           alt="Aitor Velasco"
           width="200"
           height="200"
+          placeholder="blur"
         />
       </Box>
     )

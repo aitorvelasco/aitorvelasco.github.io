@@ -1,0 +1,10 @@
+module.exports = {
+    env: {
+      CONTENTFUL_SPACE_ID: 'NEXT_PUBLIC_CONTENTFUL_SPACE_ID',
+      CONTENTFUL_ACCESS_TOKEN_DRAFT: 'NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN_DRAFT',
+      CONTENTFUL_ACCESS_TOKEN: 'NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN'
+    },
+    images: {
+      domains: ['images.ctfassets.net'],
+    },
+  }

@@ -1,11 +1,11 @@
 export interface Project {
   name: string
-  image: string
+  imagePreview: string
   url?: string
   description: string
 }
 
-export interface CVInfoProps {
+export interface Job {
   company: string
   logo: string
   time: string
