@@ -1,7 +1,7 @@
 import { Header, Stage } from '../src/components'
 import { Box } from '@material-ui/core'
 
-import fetchEntries from '../src/utils/contentfulData'
+import fetchEntries from '../src/services/contentfulService'
 
 const Home =({jobs}) => {
   return (
@@ -15,7 +15,7 @@ const Home =({jobs}) => {
 export default Home
 
 export const getStaticProps = async () => {
-  const res = await fetchEntries()
+  const res = await fetchEntries('job')
   const jobs = await res.map((p) => {
     return p.fields
   })
