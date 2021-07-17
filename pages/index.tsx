@@ -24,7 +24,7 @@ const Home = ({ jobs, profile, schools }) => {
 
 export default Home
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const responseProfile = await fetchEntries('profile')
   const profile = await responseProfile.map((p) => {
     return p.fields

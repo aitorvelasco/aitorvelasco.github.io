@@ -7,10 +7,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "prettier": "prettier --write .",
-    "lint": "next lint",
-    "build-export": "bash -c 'rm -fr ../aitorvelasco.github.io/{404.html,_next,index.html,posts} && npm run build && npx next start && npx next export && cp -a out/. ../aitorvelasco.github.io'"
+    "lint": "next lint"
   },
   "dependencies": {
     "@material-ui/core": "4.11.4",
