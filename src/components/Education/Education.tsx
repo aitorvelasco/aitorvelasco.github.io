@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Box, Grid, Container, Typography } from '@material-ui/core'
+import ReactMarkdown from 'react-markdown'
 
 import profilePic from '../../../public/its-a-me.jpg'
 
@@ -28,7 +29,10 @@ const Education = ({ schools }) => {
                 blurDataURL={profilePic}
                 alt={site}
               />
-              <Typography>{description}</Typography>
+              <Typography>
+                {/* eslint-disable-next-line react/no-children-prop */}
+                <ReactMarkdown children={description}></ReactMarkdown>
+              </Typography>
             </Box>
           )
         })}
