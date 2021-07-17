@@ -19,22 +19,23 @@ const useStyles = makeStyles(({ palette }) => ({
   },
 }))
 
-const Header = () => {
+const Header = ({ avatar }) => {
   const { me } = useStyles()
   return (
-    <Grid container justify="space-around" alignItems="center">
+    <Grid container justify="space-around" alignItems="flex-end">
       <Grid item>
         <Typography variant="h1">Hola, soy Aitor Velasco</Typography>
-        <Typography variant="h1" component="h2">Front End Developer</Typography>
+        <Typography variant="h1" component="h2" gutterBottom>Front End Developer</Typography>
       </Grid>
       <Grid item>
         <Image
           className={me}
-          src={profilePic}
+          src={`https:${avatar.fields.file.url}`}
           alt="Aitor Velasco"
           width="200"
           height="200"
           placeholder="blur"
+          blurDataURL={profilePic}
         />
       </Grid>
     </Grid>

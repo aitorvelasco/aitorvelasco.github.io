@@ -8,8 +8,8 @@ const host = !isProduction() ? 'preview.contentful.com' : ''
 const contentfulClient = createClient({space, accessToken, host })
 
 async function fetchEntries(contentType: string) {
-  const jobs = await contentfulClient.getEntries({content_type: contentType})
-  return jobs.items
+  const entries = await contentfulClient.getEntries({content_type: contentType})
+  return entries.items
 }
 
 export default fetchEntries

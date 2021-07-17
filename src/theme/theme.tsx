@@ -3,6 +3,7 @@ import { blue } from '@material-ui/core/colors'
 
 import globalStyles from './globalStyles'
 import font from './fonts'
+import breakpoints from './breakpoints'
 
 const theme = createMuiTheme({
     ...globalStyles,
@@ -17,16 +18,25 @@ const theme = createMuiTheme({
     typography: {
       h1: {
         fontFamily: font.primary,
-        fontSize: '75px',
-        lineHeight: 0.75
+        fontSize: '48px',
+        lineHeight: 0.75,
+        [breakpoints.up('lg')]: {
+          fontSize: '75px',
+        }
       },
       h2: {
         fontFamily: font.primary,
-        fontSize: '48px'
+        fontSize: '36px',
+        [breakpoints.up('lg')]: {
+          fontSize: '48px'
+        }
       },
       h3: {
         fontFamily: font.primary,
-        fontSize: '36px'
+        fontSize: '30px',
+        [breakpoints.up('lg')]: {
+          fontSize: '36px'
+        }
       },
       body1: {
         fontFamily: font.secondary,
@@ -35,6 +45,7 @@ const theme = createMuiTheme({
         fontFamily: font.secondary,
       }
     },
+    breakpoints,
   })
 
 export default theme

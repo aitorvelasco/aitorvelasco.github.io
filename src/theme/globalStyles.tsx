@@ -1,6 +1,8 @@
 import { createMuiTheme } from '@material-ui/core'
 import { blue } from '@material-ui/core/colors'
 
+import breakpoints from './breakpoints'
+
 const globalStyles = createMuiTheme({
   overrides: {
     MuiCssBaseline: {
@@ -9,10 +11,13 @@ const globalStyles = createMuiTheme({
           boxSizing: 'border-box',
         },
         'html, body': {
-          padding: '16px 32px',
           margin: 0,
           fontFamily: `'Roboto', sans-serif`,
           backgroundColor: blue[100],
+          padding: '8px',
+          [breakpoints.up('lg')]: {
+            padding: '16px 32px',
+          },
         },
         a: {
           color: 'inherit',

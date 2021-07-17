@@ -5,7 +5,6 @@ const Stage = ({ jobs }) => {
   return (
     <Container maxWidth="xl">
       <Typography variant="h2">Experiencia laboral</Typography>
-      <ul>
         {jobs.map((job) => {
           const { company, logo, time, projects } = job
           return (
@@ -18,7 +17,6 @@ const Stage = ({ jobs }) => {
             />
           )
         })}
-      </ul>
     </Container>
   )
 }

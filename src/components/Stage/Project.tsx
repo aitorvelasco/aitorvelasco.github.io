@@ -24,8 +24,8 @@ const Project = ({ name, description, imagePreview, url }) => {
         <Link href={url} target="_blank">
           <Image
             src={`https:${imagePreview.fields.file.url}`}
-            width="1280"
-            height="640"
+            width={1280}
+            height={640}
             placeholder="blur"
             blurDataURL={profilePic}
             alt={name}
