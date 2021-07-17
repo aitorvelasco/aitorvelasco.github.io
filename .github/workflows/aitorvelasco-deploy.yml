@@ -35,9 +35,10 @@ jobs:
       env:
         CONTENTFUL_SPACE_ID: n2cmnieqo7ko
         CONTENTFUL_ACCESS_TOKEN: EEKs-vkq0uiWsr2SuSPnVKe-sKJFHRcxqRs-uwGdwh0
+    - run: touch ./out/.nojekyll
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        branch: master # The branch the action should deploy to.
+        branch: gh-pages # The branch the action should deploy to.
         folder: out # The folder the action should deploy.
