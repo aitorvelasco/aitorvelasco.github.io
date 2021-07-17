@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -28,8 +28,14 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
+      env:
+        CONTENTFUL_SPACE_ID: n2cmnieqo7ko
+        CONTENTFUL_ACCESS_TOKEN: EEKs-vkq0uiWsr2SuSPnVKe-sKJFHRcxqRs-uwGdwh0
     - run: npm run export
-    
+      env:
+        CONTENTFUL_SPACE_ID: n2cmnieqo7ko
+        CONTENTFUL_ACCESS_TOKEN: EEKs-vkq0uiWsr2SuSPnVKe-sKJFHRcxqRs-uwGdwh0
+
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
