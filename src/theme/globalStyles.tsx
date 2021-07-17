@@ -1,8 +1,7 @@
 import { createMuiTheme } from '@material-ui/core'
+import { blue } from '@material-ui/core/colors'
 
-import { bluePalette } from './theme'
-
-const globalStyle = createMuiTheme({
+const globalStyles = createMuiTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {
@@ -12,9 +11,8 @@ const globalStyle = createMuiTheme({
         'html, body': {
           padding: '16px 32px',
           margin: 0,
-          fontFamily: `-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,
-          backgroundColor: bluePalette,
+          fontFamily: `'Roboto', sans-serif`,
+          backgroundColor: blue[100],
         },
         a: {
           color: 'inherit',
@@ -28,4 +26,4 @@ const globalStyle = createMuiTheme({
   },
 })
 
-export default globalStyle
+export default globalStyles

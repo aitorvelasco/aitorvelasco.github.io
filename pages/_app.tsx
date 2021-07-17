@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import { ThemeProvider, CssBaseline } from '@material-ui/core'
-import globalStyle from '../styles/GlobalStyles'
+import { theme } from '../src/theme'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Aitor Velasco - Portfolio</title>
       </Head>
-      <ThemeProvider theme={globalStyle}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>

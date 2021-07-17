@@ -1,6 +1,6 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheets } from '@material-ui/core/styles';
+import { ServerStyleSheets } from '@material-ui/core/styles'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -29,6 +29,9 @@ class MyDocument extends Document {
             content="Curriculum Vitae y Portfolio de Aitor Velasco"
           />
           <link rel="icon" href="/favicon.ico" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Josefin+Sans&display=swap" rel="stylesheet" />
         </Head>
           <Main />
           <NextScript />
