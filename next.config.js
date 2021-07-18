@@ -1,5 +1,5 @@
 module.exports = {
-    basePath: '/',
+    basePath: '',
     assetPrefix: '/',
     env: {
       spaceId: process.env.CONTENTFUL_SPACE_ID,
