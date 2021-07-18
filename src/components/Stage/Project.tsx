@@ -22,10 +22,10 @@ const Project = ({ name, description, imagePreview, url }) => {
         <Link href={url} target="_blank">
           <Image
             src={imagePreview}
+            alt={name}
             width={1280}
             height={640}
             placeholder="blur"
-            alt={name}
           />
         </Link>
       )}

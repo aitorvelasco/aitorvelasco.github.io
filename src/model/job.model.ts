@@ -1,8 +1,8 @@
 export interface Project {
   name: string
   imagePreview: string
-  url?: string
   description: string
+  url?: string
 }
 
 export interface Job {

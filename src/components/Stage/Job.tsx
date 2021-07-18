@@ -43,7 +43,6 @@ const Job = ({ company, time, logo, projects }) => {
               alt={company}
               width={150}
               height={35}
-              layout="fixed"
               objectFit="contain"
             />
         </Grid>

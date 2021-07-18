@@ -20,10 +20,10 @@ const Education = () => {
               </Grid>
               <Image
                 src={logo}
+                alt={site}
                 width={100}
                 height={100}
-                placeholder="blur"
-                alt={site}
+                objectFit="contain"
               />
               <Typography>{description}</Typography>
             </Box>

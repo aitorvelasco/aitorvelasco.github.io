@@ -4,7 +4,6 @@ module.exports = {
       accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     },
     images: {
-      domains: ['images.ctfassets.net'],
       loader: 'imgix',
       path: '',
     },
