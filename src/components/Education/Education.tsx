@@ -1,14 +1,14 @@
 import Image from 'next/image'
-import { Box, Grid, Container, Typography } from '@material-ui/core'
+import { Box, Grid, Typography } from '@material-ui/core'
 import ReactMarkdown from 'react-markdown'
 
 import profilePic from '../../../public/its-a-me.jpg'
 
 const Education = ({ schools }) => {
   return (
-    <Container maxWidth="xl">
+    <>
       <Typography variant="h2">Educación</Typography>
-      <Grid container justify="space-around">
+      <Grid container justifyContent="space-around">
         {schools.map((school) => {
           const { site, logo, time, description } = school
           return (
@@ -37,7 +37,7 @@ const Education = ({ schools }) => {
           )
         })}
       </Grid>
-    </Container>
+    </>
   )
 }
 

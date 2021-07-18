@@ -1,11 +1,11 @@
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core'
 import { blue } from '@material-ui/core/colors'
 
 import globalStyles from './globalStyles'
 import font from './fonts'
 import breakpoints from './breakpoints'
 
-const theme = createMuiTheme({
+const theme = createTheme({
     ...globalStyles,
     palette: {
       primary: {

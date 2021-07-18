@@ -22,7 +22,7 @@ const useStyles = makeStyles(({ palette }) => ({
 const Header = ({ avatar }) => {
   const { me } = useStyles()
   return (
-    <Grid container justify="space-around" alignItems="flex-end">
+    <Grid container justifyContent="space-around" alignItems="flex-end">
       <Grid item>
         <Typography variant="h1">Hola, soy Aitor Velasco</Typography>
         <Typography variant="h1" component="h2" gutterBottom>Front End Developer</Typography>

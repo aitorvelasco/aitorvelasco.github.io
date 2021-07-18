@@ -1,9 +1,9 @@
-import { createMuiTheme } from '@material-ui/core'
+import { createTheme } from '@material-ui/core'
 import { blue } from '@material-ui/core/colors'
 
 import breakpoints from './breakpoints'
 
-const globalStyles = createMuiTheme({
+const globalStyles = createTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {

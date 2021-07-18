@@ -1,24 +1,29 @@
-import { Box } from '@material-ui/core'
+import { Container, makeStyles } from '@material-ui/core'
 import { Header, Bio, Stage, Education } from '../src/components'
 import fetchEntries from '../src/services/contentfulService'
 
+const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
+  root: {
+    margin: 'auto',
+    backgroundColor: palette.common.white,
+    borderRadius: 10,
+    boxShadow: '0 3px 10px black',
+    padding: spacing(2),
+    [breakpoints.up('md')]: {
+      padding: spacing(4),
+    },
+  },
+}))
+
 const Home = ({ jobs, profile, schools }) => {
+  const { root } = useStyles()
   return (
-    <Box
-      maxWidth="xl"
-      m="auto"
-      p={{ xs: 2, md: 4 }}
-      bgcolor="common.white"
-      borderRadius={10}
-      boxShadow="0px 3px 10px black"
-    >
-      <Box mb={4}>
-        <Header avatar={profile[0].avatar} />
-      </Box>
+    <Container maxWidth="xl" className={root}>
+      <Header avatar={profile[0].avatar} />
       <Bio aboutMe={profile[0].bio} />
       <Stage jobs={jobs} />
       <Education schools={schools} />
-    </Box>
+    </Container>
   )
 }
 
@@ -44,7 +49,7 @@ export const getStaticProps = async () => {
     props: {
       jobs,
       profile,
-      schools
+      schools,
     },
   }
 }
