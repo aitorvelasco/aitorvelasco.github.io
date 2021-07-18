@@ -30,12 +30,13 @@ const Header = ({ avatar }) => {
       <Grid item>
         <Image
           className={me}
-          src={`https:${avatar.fields.file.url}`}
+          // src={`https:${avatar.fields.file.url}`}
+          src={profilePic}
           alt="Aitor Velasco"
           width="200"
           height="200"
           placeholder="blur"
-          blurDataURL={profilePic}
+          // blurDataURL={profilePic}
         />
       </Grid>
     </Grid>
