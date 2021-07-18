@@ -43,32 +43,30 @@ const jobs: Job[] = [
           name: 'Store BQ',
           description: 'Tienda online principal de BQ. Basado en Magento.',
           imagePreview: bqstore,
-          url: '',
+          url: 'http://web.archive.org/web/20170515081151/https://store.bq.com/es/',
         },
         {
           name: 'BQcom',
           description: 'Website principal de BQ. Usa un CMS customizado',
           imagePreview: bqcom,
-          url: '',
+          url: 'http://web.archive.org/web/20180730044702/https://www.bq.com/es/',
         },
         {
           name: 'DIWO',
           description:
             'Wordpress enfocado a la divulgación tecnológica, con posibilidad de ofrecer cursos.',
           imagePreview: diwo,
-          url: '',
+          url: 'http://web.archive.org/web/20170520061706/http://diwo.bq.com/',
         },
       ],
     },
     {
       company: 'Otros proyectos',
-      time: '',
-      logo: '',
       projects: [
         {
           name: 'Sara Montoya Fotografía',
           description:
-            'Proyecto final de Master',
+            'Proyecto final de Master. Wordpress enfocado a reportajes fotográficos',
           imagePreview: saraphoto,
           url: 'https://www.saramontoyafotografia.com',
         },
