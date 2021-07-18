@@ -33,7 +33,7 @@ const Project = ({ name, description, imagePreview, url }) => {
           />
         </Link>
       )}
-      <Typography>
+      <Typography component="span">
         {/* eslint-disable-next-line react/no-children-prop */}
         <ReactMarkdown children={description}></ReactMarkdown>
       </Typography>

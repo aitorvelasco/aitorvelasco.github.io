@@ -29,7 +29,7 @@ const Education = ({ schools }) => {
                 blurDataURL={profilePic}
                 alt={site}
               />
-              <Typography>
+              <Typography component="span">
                 {/* eslint-disable-next-line react/no-children-prop */}
                 <ReactMarkdown children={description}></ReactMarkdown>
               </Typography>

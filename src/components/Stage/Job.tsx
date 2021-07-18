@@ -10,6 +10,9 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
       borderBottom: `2px solid ${palette.grey[500]}`,
     },
   },
+  logoImage: {
+    textAlign: 'center'
+  },
   projectList: (projectsLength) => ({
     [breakpoints.up('lg')]: {
       display: 'grid',
@@ -19,7 +22,7 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
 }))
 
 const Job = ({ company, time, logo, projects }) => {
-  const { jobItem, projectList } = useStyles(projects.length)
+  const { jobItem, logoImage, projectList } = useStyles(projects.length)
   return (
     <Grid container className={jobItem}>
         <Grid container item alignItems="baseline" spacing={2}>
@@ -34,8 +37,7 @@ const Job = ({ company, time, logo, projects }) => {
           </Grid>
         </Grid>
 
-        <Grid item xs={12}>
-          <Typography align="center">
+        <Grid item xs={12} className={logoImage}>
             <Image
               src={`https:${logo.fields.file.url}`}
               alt={company}
@@ -44,7 +46,6 @@ const Job = ({ company, time, logo, projects }) => {
               layout="fixed"
               objectFit="contain"
             />
-          </Typography>
         </Grid>
       <Grid container item className={projectList}>
         {projects.map((project) => {
