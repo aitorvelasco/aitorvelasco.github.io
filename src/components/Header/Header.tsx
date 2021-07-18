@@ -19,7 +19,7 @@ const useStyles = makeStyles(({ palette }) => ({
   },
 }))
 
-const Header = ({ avatar }) => {
+const Header = () => {
   const { me } = useStyles()
   return (
     <Grid container justifyContent="space-around" alignItems="flex-end">
@@ -30,13 +30,11 @@ const Header = ({ avatar }) => {
       <Grid item>
         <Image
           className={me}
-          // src={`https:${avatar.fields.file.url}`}
           src={profilePic}
           alt="Aitor Velasco"
           width="200"
           height="200"
           placeholder="blur"
-          // blurDataURL={profilePic}
         />
       </Grid>
     </Grid>

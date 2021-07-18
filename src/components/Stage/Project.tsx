@@ -1,8 +1,5 @@
 import Image from 'next/image'
 import { Grid, Link, makeStyles, Typography } from '@material-ui/core'
-import ReactMarkdown from 'react-markdown'
-
-import profilePic from '../../../public/its-a-me.jpg'
 
 const useStyles = makeStyles(({ spacing }) => ({
   projectListItem: {
@@ -24,19 +21,15 @@ const Project = ({ name, description, imagePreview, url }) => {
       {imagePreview && (
         <Link href={url} target="_blank">
           <Image
-            src={`https:${imagePreview.fields.file.url}`}
+            src={imagePreview}
             width={1280}
             height={640}
             placeholder="blur"
-            blurDataURL={profilePic}
             alt={name}
           />
         </Link>
       )}
-      <Typography component="span">
-        {/* eslint-disable-next-line react/no-children-prop */}
-        <ReactMarkdown children={description}></ReactMarkdown>
-      </Typography>
+      <Typography>{description}</Typography>
     </Grid>
   )
 }

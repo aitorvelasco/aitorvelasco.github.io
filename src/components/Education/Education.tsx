@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import { Box, Grid, Typography } from '@material-ui/core'
-import ReactMarkdown from 'react-markdown'
 
-import profilePic from '../../../public/its-a-me.jpg'
+import { schools } from '../../data'
 
-const Education = ({ schools }) => {
+const Education = () => {
   return (
     <>
       <Typography variant="h2">Educación</Typography>
@@ -20,19 +19,13 @@ const Education = ({ schools }) => {
                 </Typography>
               </Grid>
               <Image
-                src={`https:${logo.fields.file.url}`}
+                src={logo}
                 width={100}
                 height={100}
                 placeholder="blur"
-                objectFit="contain"
-                layout="fixed"
-                blurDataURL={profilePic}
                 alt={site}
               />
-              <Typography component="span">
-                {/* eslint-disable-next-line react/no-children-prop */}
-                <ReactMarkdown children={description}></ReactMarkdown>
-              </Typography>
+              <Typography>{description}</Typography>
             </Box>
           )
         })}

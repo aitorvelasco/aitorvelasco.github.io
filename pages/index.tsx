@@ -1,6 +1,5 @@
 import { Container, makeStyles } from '@material-ui/core'
 import { Header, Bio, Stage, Education } from '../src/components'
-import fetchEntries from '../src/services/contentfulService'
 
 const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
   root: {
@@ -15,41 +14,16 @@ const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
   },
 }))
 
-const Home = ({ jobs, profile, schools }) => {
+const Home = () => {
   const { root } = useStyles()
   return (
     <Container maxWidth="xl" className={root}>
-      <Header avatar={profile[0].avatar} />
-      <Bio aboutMe={profile[0].bio} />
-      <Stage jobs={jobs} />
-      <Education schools={schools} />
+      <Header />
+      <Bio />
+      <Stage />
+      <Education />
     </Container>
   )
 }
 
 export default Home
-
-export const getStaticProps = async () => {
-  const responseProfile = await fetchEntries('profile')
-  const profile = await responseProfile.map((p) => {
-    return p.fields
-  })
-
-  const responseJob = await fetchEntries('job')
-  const jobs = await responseJob.map((p) => {
-    return p.fields
-  })
-
-  const responseSchool = await fetchEntries('school')
-  const schools = await responseSchool.map((p) => {
-    return p.fields
-  })
-
-  return {
-    props: {
-      jobs,
-      profile,
-      schools,
-    },
-  }
-}

@@ -39,7 +39,7 @@ const Job = ({ company, time, logo, projects }) => {
 
         <Grid item xs={12} className={logoImage}>
             <Image
-              src={`https:${logo.fields.file.url}`}
+              src={logo}
               alt={company}
               width={150}
               height={35}
@@ -49,8 +49,7 @@ const Job = ({ company, time, logo, projects }) => {
         </Grid>
       <Grid container item className={projectList}>
         {projects.map((project) => {
-          const projectFields = project.fields
-          const { name, description, imagePreview, url } = projectFields
+          const { name, description, imagePreview, url } = project
           return (
             <Project
               name={name}
