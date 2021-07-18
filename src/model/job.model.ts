@@ -7,7 +7,7 @@ export interface Project {
 
 export interface Job {
   company: string
-  logo: string
-  time: string
   projects: Project[]
+  time?: string
+  logo?: string
 }

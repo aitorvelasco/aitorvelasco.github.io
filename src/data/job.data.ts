@@ -8,6 +8,8 @@ import bqstore from '../../public/portfolio/bq-store.png'
 import bqcom from '../../public/portfolio/bqcom.png'
 import diwo from '../../public/portfolio/diwo.png'
 
+import saraphoto from '../../public/portfolio/sara-foto.jpg'
+
 import { Job } from '../model'
 
 const jobs: Job[] = [
@@ -55,6 +57,20 @@ const jobs: Job[] = [
             'Wordpress enfocado a la divulgación tecnológica, con posibilidad de ofrecer cursos.',
           imagePreview: diwo,
           url: '',
+        },
+      ],
+    },
+    {
+      company: 'Otros proyectos',
+      time: '',
+      logo: '',
+      projects: [
+        {
+          name: 'Sara Montoya Fotografía',
+          description:
+            'Proyecto final de Master',
+          imagePreview: saraphoto,
+          url: 'https://www.saramontoyafotografia.com',
         },
       ],
     },

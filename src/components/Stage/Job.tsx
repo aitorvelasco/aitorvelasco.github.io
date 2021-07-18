@@ -10,8 +10,8 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
       borderBottom: `2px solid ${palette.grey[500]}`,
     },
   },
-  logoImage: {
-    textAlign: 'center'
+  logoImage: {
+    textAlign: 'center',
   },
   projectList: (projectsLength) => ({
     [breakpoints.up('lg')]: {
@@ -25,27 +25,32 @@ const Job = ({ company, time, logo, projects }) => {
   const { jobItem, logoImage, projectList } = useStyles(projects.length)
   return (
     <Grid container className={jobItem}>
-        <Grid container item alignItems="baseline" spacing={2}>
-          <Grid item>
-            <Typography variant="h3">{company}</Typography>
-          </Grid>
+      <Grid container item alignItems="baseline" spacing={2}>
+        <Grid item>
+          <Typography variant="h3">{company}</Typography>
+        </Grid>
 
+        {time && (
           <Grid item>
             <Typography variant="caption" color="textSecondary">
               {time}
             </Typography>
           </Grid>
-        </Grid>
+        )}
+        
+      </Grid>
 
+      {logo && (
         <Grid item xs={12} className={logoImage}>
-            <Image
-              src={logo}
-              alt={company}
-              width={150}
-              height={35}
-              objectFit="contain"
-            />
+          <Image
+            src={logo}
+            alt={company}
+            width={150}
+            height={35}
+            objectFit="contain"
+          />
         </Grid>
+      )}
       <Grid container item className={projectList}>
         {projects.map((project) => {
           const { name, description, imagePreview, url } = project
