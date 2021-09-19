@@ -2,8 +2,11 @@ import { Box, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(({ palette, breakpoints }) => ({
   triangle: {
-    borderBottom: '50px solid transparent',
+    borderBottom: '100px solid transparent',
     borderTop: `150px solid ${palette.common.black}`,
+    [breakpoints.between('xs','md')]: {
+    borderBottom: '50px solid transparent',
+    },
     [breakpoints.up('lg')]: {
       borderBottom: '150px solid transparent',
       borderLeft: '500px solid transparent',
