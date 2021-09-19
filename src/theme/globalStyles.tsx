@@ -1,7 +1,5 @@
 import { createTheme } from '@material-ui/core'
 
-import breakpoints from './breakpoints'
-
 const globalStyles = createTheme({
   overrides: {
     MuiCssBaseline: {
@@ -13,7 +11,7 @@ const globalStyles = createTheme({
           margin: 0,
           fontFamily: `'Roboto', sans-serif`,
           backgroundColor: '#E5E5E5',
-          padding: '16px',
+          padding: '16px 12px',
         },
         a: {
           color: 'inherit',

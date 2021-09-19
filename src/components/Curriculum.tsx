@@ -121,7 +121,7 @@ const Curriculum = () => {
         </Link>
       </Typography>
 
-      <Typography gutterBottom color="textPrimary">
+      <Typography gutterBottom color="textPrimary" align="justify">
         Como proyecto final desarrollé un sitio web de fotografía basado en
         Wordpress:{' '}
         <Link
