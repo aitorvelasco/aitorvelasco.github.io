@@ -19,6 +19,11 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    '&:hover': {
+      '&>img':{
+        transform: 'scale(1.2)',
+      },
+    },
     '&>p': {
       lineHeight: 2.5,
     },
