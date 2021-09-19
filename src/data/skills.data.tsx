@@ -13,69 +13,54 @@ import {
   TsIcon,
 } from '../components/assets'
 
-const SKILL_ICONS = {
-  HTML5: <Html5Icon />,
-  CSS3: <Css3Icon />,
-  GIT: <GitIcon />,
-  JEST: <JestIcon />,
-  JS: <JsIcon />,
-  MUI: <MuiIcon />,
-  NEXTJS: <NextJsIcon />,
-  REACT: <ReactIcon />,
-  SASS: <SassIcon />,
-  SB: <StorybookIcon />,
-  SC: <StyledComponentsIcon />,
-  TS: <TsIcon />
-}
-
 const skills = [
   {
     name: 'HTML5',
-    img: SKILL_ICONS['HTML5'],
+    img: <Html5Icon />,
   },
   {
     name: 'CSS3',
-    img: SKILL_ICONS['CSS3'],
+    img: <Css3Icon />,
   },
   {
     name: 'Sass',
-    img: SKILL_ICONS['SASS'],
+    img: <SassIcon />,
   },
   {
     name: 'Javascript ES6+',
-    img: SKILL_ICONS['JS'],
+    img: <JsIcon />,
   },
   {
     name: 'Typescript',
-    img: SKILL_ICONS['TS'],
+    img: <TsIcon />,
   },
   {
     name: 'React',
-    img: SKILL_ICONS['REACT'],
+    img: <ReactIcon />,
   },
   {
     name: 'NextJS',
-    img: SKILL_ICONS['NEXTJS'],
+    img: <NextJsIcon />,
   },
   {
     name: 'Git',
-    img: SKILL_ICONS['GIT'],
+    img: <GitIcon />,
   },
   {
     name: 'Material UI',
-    img: SKILL_ICONS['MUI'],
+    img: <MuiIcon />,
   },
   {
     name: 'Styled-Components',
-    img: SKILL_ICONS['SC'],
+    img: <StyledComponentsIcon />,
   },
   {
     name: 'Storybook',
-    img: SKILL_ICONS['SB'],
+    img: <StorybookIcon />,
   },
   {
     name: 'Jest',
-    img: SKILL_ICONS['JEST'],
+    img: <JestIcon />,
   },
 ]
 

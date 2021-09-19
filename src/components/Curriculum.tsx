@@ -26,8 +26,8 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
     },
     '&>p': {
       lineHeight: 2.5,
-    }
-  }
+    },
+  },
 }))
 
 const Curriculum = () => {
