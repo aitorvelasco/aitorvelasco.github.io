@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Aitor Velasco - Portfolio</title>
+        <title>Aitor Velasco - Curriculum Vitae</title>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

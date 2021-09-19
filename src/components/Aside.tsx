@@ -22,9 +22,6 @@ const Aside = () => {
       <Typography component="p" variant="caption">
         Front-End Developer
       </Typography>
-      <Typography component="p" variant="caption">
-        627865306
-      </Typography>
       <Typography gutterBottom component="p" variant="caption">
         avelascoo92@gmail.com
       </Typography>

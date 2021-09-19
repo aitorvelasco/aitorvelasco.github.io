@@ -20,14 +20,14 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
     flexDirection: 'column',
     alignItems: 'center',
     '&:hover': {
-      '&>img':{
+      '&>svg': {
         transform: 'scale(1.2)',
       },
     },
     '&>p': {
       lineHeight: 2.5,
-    },
-  },
+    }
+  }
 }))
 
 const Curriculum = () => {
@@ -57,7 +57,7 @@ const Curriculum = () => {
       <Box className={skillsBox} mb={2}>
         {skills.map(({ name, img }) => (
           <Box className={skill} key={name}>
-            <img width="50" height="50" alt={name} src={img} />
+            {img}
             <Typography>{name}</Typography>
           </Box>
         ))}
