@@ -1,0 +1,32 @@
+import { Typography, makeStyles } from '@material-ui/core'
+
+const useStyles = makeStyles(() => ({
+  name: {
+    fontSize: '116px',
+    textTransform: 'uppercase',
+    writingMode: 'vertical-lr',
+    textOrientation: 'upright',
+    lineHeight: 1.3,
+  },
+}))
+
+const Aside = () => {
+  const { name } = useStyles()
+  return (
+    <>
+      <Typography className={name}>Aitor&nbsp;Velasco</Typography>
+
+      <Typography component="p" variant="caption">
+        Aitor Velasco
+      </Typography>
+      <Typography component="p" variant="caption">
+        627865306
+      </Typography>
+      <Typography gutterBottom component="p" variant="caption">
+        avelascoo92@gmail.com
+      </Typography>
+    </>
+  )
+}
+
+export default Aside

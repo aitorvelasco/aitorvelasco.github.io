@@ -1,5 +1,4 @@
 import { createTheme } from '@material-ui/core'
-import { blue } from '@material-ui/core/colors'
 
 import globalStyles from './globalStyles'
 import font from './fonts'
@@ -9,7 +8,13 @@ const theme = createTheme({
     ...globalStyles,
     palette: {
       primary: {
-        main: blue[100],
+        main: '#95b7df',
+      },
+      secondary: {
+        main: '#8e8e8e',
+      },
+      text: {
+        secondary: '#24558a'
       },
       grey: {
         500: '#bdbcbc',
@@ -43,7 +48,7 @@ const theme = createTheme({
       },
       caption: {
         fontFamily: font.secondary,
-      }
+      },
     },
     breakpoints,
   })

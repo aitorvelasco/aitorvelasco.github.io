@@ -1,37 +1,36 @@
-import { Container, Grid, makeStyles } from '@material-ui/core'
-import { Header, Bio, Stage, Education } from '../src/components'
+import { Container, Grid, Hidden, makeStyles } from '@material-ui/core'
 
-const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
-  root: {
+import { Aside, Curriculum, Footer, Header } from '../src/components'
+
+const useStyles = makeStyles(({ palette }) => ({
+  wrapper: {
+    boxShadow: '-10px 10px',
     backgroundColor: palette.common.white,
-    borderRadius: 10,
-    boxShadow: '0 3px 10px black',
-    padding: spacing(2),
-    gridTemplateColumns: `repeat(2, 1fr)`,
-    [breakpoints.up('md')]: {
-      padding: spacing(4),
-    },
+    padding: 0,
+    overflow: 'hidden',
   },
 }))
 
 const Home = () => {
-  const { root } = useStyles()
+  const { wrapper } = useStyles()
   return (
-    <Container maxWidth="xl" className={root}>
-      <Grid container spacing={6} direction="column">
-        <Grid item>
-          <Header />
+    <Container maxWidth="lg" className={wrapper}>
+      <Header />
+      <Container maxWidth={false}>
+        <Grid container spacing={4}>
+          <Hidden mdDown>
+            <Grid item xs={2}>
+              <Aside />
+            </Grid>
+          </Hidden>
+          <Grid item lg={9}>
+            <Curriculum />
+          </Grid>
         </Grid>
-        <Grid item>
-          <Bio />
-        </Grid>
-        <Grid item>
-          <Stage />
-        </Grid>
-        <Grid item>
-          <Education />
-        </Grid>
-      </Grid>
+      </Container>
+      <Hidden lgUp>
+        <Footer />
+      </Hidden>
     </Container>
   )
 }
