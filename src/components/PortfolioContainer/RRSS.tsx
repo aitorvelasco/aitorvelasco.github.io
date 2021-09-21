@@ -12,7 +12,7 @@ const RRSS = () => (
     color="white"
   >
     <Box>
-      <Link href="mailto:avelascoo92@gmail.com">
+      <Link href="mailto:aitorvelascodev@gmail.com">
         <EmailIcon />
       </Link>
       <Link

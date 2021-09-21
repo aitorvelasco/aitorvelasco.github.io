@@ -33,6 +33,9 @@ const NavBar = () => {
         <Button variant="text" color="default" href="#portfolio">
           Portfolio
         </Button>
+        <Button variant="text" color="default" href="#contact">
+          Contacto
+        </Button>
         <Button variant="outlined" color="default" href="/" target="_blank">
           Ver CV
         </Button>

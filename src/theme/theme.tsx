@@ -49,6 +49,9 @@ const theme = createTheme({
       caption: {
         fontFamily: font.secondary,
       },
+      button: {
+        fontFamily: font.secondary,
+      }
     },
     breakpoints,
   })

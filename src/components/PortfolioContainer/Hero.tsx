@@ -13,7 +13,7 @@ const useStyles = makeStyles(({spacing, palette }) => ({
       me: {
         alignSelf: 'flex-end',
         justifySelf: 'end',
-        maxWidth: '500px',
+        maxWidth: '70vw',
       },
 }))
 
