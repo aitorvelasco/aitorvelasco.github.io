@@ -1,20 +1,16 @@
 import { Box, makeStyles } from '@material-ui/core'
 
-const useStyles = makeStyles(({ palette, breakpoints }) => ({
+const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
   triangle: {
-    borderBottom: '100px solid transparent',
-    borderTop: `150px solid ${palette.common.black}`,
-    [breakpoints.between('xs','md')]: {
-    borderBottom: '50px solid transparent',
-    },
+    height: '300px',
+    marginBottom: spacing(-17),
+    background: `linear-gradient(0, ${palette.common.white} 50%, ${palette.common.black} 50%)`,
     [breakpoints.up('lg')]: {
-      borderBottom: '150px solid transparent',
-      borderLeft: '500px solid transparent',
-      borderRight: `500px solid ${palette.common.black}`,
-    },
+      marginBottom: spacing(-4.5),
+      background: `linear-gradient(16.8deg, ${palette.common.white} 50%, ${palette.common.black} 50%)`,
+    }
   },
   me: {
-    position: 'absolute',
     border: '4px solid',
     borderRadius: '50%',
   },
@@ -27,7 +23,6 @@ const Header = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      mb={-4.5}
       className={triangle}
     >
       <img

@@ -6,8 +6,9 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
   wrapper: {
     boxShadow: '-10px 10px',
     backgroundColor: palette.common.white,
-    padding: 0,
     overflow: 'hidden',
+    padding: 0,
+    margin: spacing(4, 'auto'),
   },
   container: {
     [breakpoints.down('xs')]: {
@@ -20,7 +21,8 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
 const Home = () => {
   const { wrapper, container } = useStyles()
   return (
-    <Container maxWidth="lg" className={wrapper}>
+    <Container maxWidth={false}>
+      <Container maxWidth="lg" className={wrapper}>
       <Header />
       <Container maxWidth={false} className={container}>
         <Grid container spacing={4}>
@@ -37,6 +39,7 @@ const Home = () => {
       <Hidden lgUp>
         <Footer />
       </Hidden>
+      </Container>
     </Container>
   )
 }

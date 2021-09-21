@@ -22,7 +22,7 @@ const Footer = () => {
       <img
         className={logo}
         src="/logo.jpg"
-        alt="Aitor Velasco FrontEnd Developer"
+        alt="Aitor Velasco - Senior Front End Developer"
         width="150"
         height="150"
       />

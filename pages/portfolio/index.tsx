@@ -1,11 +1,27 @@
-import { Box } from '@material-ui/core'
+import { Container, makeStyles } from '@material-ui/core'
 
-const Portfolio = () => {
+import { About, Hero, NavBar, Portfolio, Skills, RRSS } from '../../src/components'
+
+const useStyles = makeStyles(() => ({
+  section: {
+    scrollMarginTop: '64px',
+  },
+}))
+
+const PortfolioContainer = () => {
+  const { section } = useStyles()
   return (
-    <Box>
-      Página del portfolio
-    </Box>
+    <>
+      <NavBar />
+      <Hero />
+      <About />
+      <Container maxWidth="md" id="skills" className={section}>
+        <Skills />
+      </Container>
+      <Portfolio />
+      <RRSS />
+    </>
   )
 }
 
-export default Portfolio
+export default PortfolioContainer

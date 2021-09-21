@@ -10,6 +10,9 @@ import SassIcon from './sass.svg'
 import StorybookIcon from './sb.svg'
 import StyledComponentsIcon from './sc.svg'
 import TsIcon from './ts.svg'
+import LinkedInIcon from './linkedin.svg'
+import GithubIcon from './github.svg'
+import EmailIcon from './email.svg'
 
 export {
   Html5Icon,
@@ -23,5 +26,8 @@ export {
   SassIcon,
   StorybookIcon,
   StyledComponentsIcon,
-  TsIcon
+  TsIcon,
+  LinkedInIcon,
+  GithubIcon,
+  EmailIcon
 }

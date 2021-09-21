@@ -29,10 +29,10 @@ class MyDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="Portfolio y Curriculum Vitae de Aitor Velasco - Senior Frontend Developer"
+            content="Portfolio y Curriculum Vitae de Aitor Velasco - Frontend Developer"
           />
-          <meta property="og:title" content="Aitor Velasco - Curriculum Vitae" />
-          <meta property="og:description" content="Portfolio y Curriculum Vitae de Aitor Velasco - Senior Frontend Developer" />
+          <meta property="og:title" content="Aitor Velasco | Front End Developer" />
+          <meta property="og:description" content="Portfolio y Curriculum Vitae de Aitor Velasco - Frontend Developer" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://aitorvelasco.github.io" />
           <meta

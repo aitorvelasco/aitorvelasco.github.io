@@ -8,10 +8,11 @@ const globalStyles = createTheme({
           boxSizing: 'border-box',
         },
         'html, body': {
-          margin: 0,
           fontFamily: `'Roboto', sans-serif`,
           backgroundColor: '#E5E5E5',
-          padding: '16px 12px',
+          margin: 0,
+          padding: 0,
+          scrollBehavior: 'smooth',
         },
         a: {
           color: 'inherit',
