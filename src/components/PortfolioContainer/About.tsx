@@ -3,10 +3,10 @@ import { Box, Container, Typography, makeStyles } from '@material-ui/core'
 const useStyles = makeStyles(({ palette}) => ({
   bg: {
     color: 'white',
-    background: `linear-gradient(57deg, ${palette.secondary.main} 50%, ${palette.common.black} 50%)`,
+    background: `linear-gradient(57deg, ${palette.common.black} 50%, ${palette.secondary.main} 50%)`,
   },
   section: {
-    scrollMarginTop: '64px',
+    scrollMarginTop: '76px',
   },
 }))
 

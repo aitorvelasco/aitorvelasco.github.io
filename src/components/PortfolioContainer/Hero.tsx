@@ -12,7 +12,8 @@ const useStyles = makeStyles(({spacing, palette }) => ({
       },
       me: {
         alignSelf: 'flex-end',
-        maxWidth: '640px',
+        justifySelf: 'end',
+        maxWidth: '500px',
       },
 }))
 

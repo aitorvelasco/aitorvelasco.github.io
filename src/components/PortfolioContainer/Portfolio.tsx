@@ -1,8 +1,10 @@
 import { Box, Container, Typography, makeStyles } from '@material-ui/core'
 
-const useStyles = makeStyles(({ breakpoints }) => ({
+const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   section: {
-    scrollMarginTop: '64px',
+    scrollMarginTop: '68px',
+    paddingTop: spacing(2),
+    paddingBottom: spacing(2)
   },
   portfolio: {
     display: 'grid',
