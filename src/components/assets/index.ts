@@ -13,6 +13,7 @@ import TsIcon from './ts.svg'
 import LinkedInIcon from './linkedin.svg'
 import GithubIcon from './github.svg'
 import EmailIcon from './email.svg'
+import MenuIcon from './menu.svg'
 
 export {
   Html5Icon,
@@ -29,5 +30,6 @@ export {
   TsIcon,
   LinkedInIcon,
   GithubIcon,
-  EmailIcon
+  EmailIcon,
+  MenuIcon
 }

@@ -10,11 +10,14 @@ import {
   RRSS,
 } from '../../src/components'
 
-const useStyles = makeStyles(({ spacing }) => ({
+const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   section: {
-    scrollMarginTop: '64px',
     paddingTop: spacing(2),
     paddingBottom: spacing(2),
+    scrollMarginTop: '56px',
+    [breakpoints.up('md')]:{
+      scrollMarginTop: '64px', 
+    }
   },
 }))
 

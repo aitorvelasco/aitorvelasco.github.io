@@ -16,7 +16,7 @@ import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
-import sendEmail from '../../services'
+import { sendEmail } from '../../services'
 
 const useStyles = makeStyles(() => ({
   section: {

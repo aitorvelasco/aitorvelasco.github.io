@@ -16,9 +16,6 @@ const theme = createTheme({
       text: {
         secondary: '#24558a'
       },
-      grey: {
-        500: '#bdbcbc',
-      }
     },
     typography: {
       h1: {
