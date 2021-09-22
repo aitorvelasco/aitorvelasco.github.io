@@ -8,7 +8,7 @@ import {
 
 import { works } from '../../data'
 
-const useStyles = makeStyles(({ spacing, breakpoints }) => ({
+const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
   section: {
     scrollMarginTop: '68px',
     paddingTop: spacing(2),
@@ -24,23 +24,26 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   },
   infoBox: {
     position: 'relative',
-
     '& img': {
       width: '100%',
-      '&:hover': {
-        opacity: 0.2,
-      },
     },
     '&:hover $info': {
+      transition: '.3s',
       visibility: 'visible',
+      backgroundColor: palette.grey[500],
+      opacity: 0.9
     },
   },
   info: {
+    display: 'flex',
+    flexFlow: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
     position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    textAlign: 'center',
+    left: 0,
+    top: 0,
+    bottom: 0,
+    right: 0,
     visibility: 'hidden',
   },
 }))
