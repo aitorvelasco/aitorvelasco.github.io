@@ -33,7 +33,7 @@ const works = [
     src: '/portfolio/sara-foto.jpg',
     name: 'SARA MONTOYA FOTOGRAFIA',
     description: 'Sitio web de reportajes fotográficos',
-    url: 'https://www.saramontoyafotografia.com',
+    url: 'http://web.archive.org/web/20170806024303/http://saramontoyafotografia.com',
   },
 ]
 
