@@ -22,6 +22,7 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   },
 }))
 
+// TODO: Stylish this component to beautify
 const Portfolio = () => {
   const { section, portfolio } = useStyles()
   return (

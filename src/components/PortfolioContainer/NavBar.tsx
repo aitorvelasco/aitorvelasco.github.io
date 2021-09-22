@@ -82,6 +82,7 @@ const NavBar = () => {
 
   const { navBar, navBarItems } = useStyles(HasScrolled())
 
+  // TODO: Drawer starts below appbar
   return (
     <AppBar>
       <Toolbar className={navBar}>

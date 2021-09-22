@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import {
   Box,
@@ -24,16 +24,17 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
+interface Inputs {
+  name: string
+  email: string
+  phone: string
+  message: string
+}
+
 const ContactForm = () => {
   const [open, setOpen] = useState(false)
+  const [disable, setDisable] = useState(false)
   const [statusOk, setStatusOk] = useState(false)
-
-  interface Inputs {
-    name: string
-    email: string
-    phone: string
-    message: string
-  }
 
   const PHONE_REGEX = /^[6|7|8|9][0-9]{8}$/
 
@@ -60,16 +61,27 @@ const ContactForm = () => {
   const {
     handleSubmit,
     control,
-    formState: { errors },
+    reset,
+    formState,
   } = useForm<any>({
     resolver: yupResolver(schema),
   })
 
-  // TODO: Resolve this stream
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    sendEmail(data)
+  const { errors } = formState
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ name: '', email: '', phone: '', message: '' })
+    }
+  }, [formState, reset])
+
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setDisable(true)
+    const status = await sendEmail(data)
     setOpen(true)
-    setStatusOk(true)
+    setStatusOk(status.ok)
+    setDisable(false)
   }
 
   const { section } = useStyles()
@@ -155,7 +167,7 @@ const ContactForm = () => {
             )}
           />
           <Box display="flex" justifyContent="center" py={2}>
-            <Button color="secondary" type="submit" variant="contained">
+            <Button disabled={disable} color="secondary" type="submit" variant="contained">
               Enviar
             </Button>
           </Box>
