@@ -13,28 +13,34 @@ import {
 
 import { MenuIcon } from '../assets'
 
-const useStyles = makeStyles(({ spacing, palette }) => ({
+const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
   navBar: (scrolled) => ({
     position: 'absolute',
     left: 0,
     right: 0,
     top: scrolled ? spacing(0) : spacing(2),
-    backgroundColor: scrolled ? palette.common.white : '',
+    backgroundColor: scrolled ? palette.common.white : 'transparent',
     transition: '0.25s',
     justifyContent: 'space-between',
   }),
   navBarItems: {
     display: 'flex',
-    gap: spacing(5),
+    [breakpoints.up('md')]: {
+      gap: spacing(5),
+    },
   },
+  auxToolbar: {
+    justifyContent: 'space-between'
+  }
 }))
 
-const MenuItems = ({ mobile = false, top = true }) => (
+const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
   <>
     <Button
       variant="text"
       color={top || mobile ? 'default' : 'primary'}
       href="#aboutme"
+      onClick={() => handleOpen(false)}
     >
       Sobre mi
     </Button>
@@ -42,6 +48,7 @@ const MenuItems = ({ mobile = false, top = true }) => (
       variant="text"
       color={top || mobile ? 'default' : 'primary'}
       href="#skills"
+      onClick={() => handleOpen(false)}
     >
       Habilidades
     </Button>
@@ -49,6 +56,7 @@ const MenuItems = ({ mobile = false, top = true }) => (
       variant="text"
       color={top || mobile ? 'default' : 'primary'}
       href="#portfolio"
+      onClick={() => handleOpen(false)}
     >
       Portfolio
     </Button>
@@ -56,6 +64,7 @@ const MenuItems = ({ mobile = false, top = true }) => (
       variant="text"
       color={top || mobile ? 'default' : 'primary'}
       href="#contact"
+      onClick={() => handleOpen(false)}
     >
       Contacto
     </Button>
@@ -64,6 +73,7 @@ const MenuItems = ({ mobile = false, top = true }) => (
       color={top || mobile ? 'default' : 'primary'}
       href="/"
       target="_blank"
+      onClick={() => handleOpen(false)}
     >
       Ver CV
     </Button>
@@ -80,9 +90,8 @@ const NavBar = () => {
     })
   }
 
-  const { navBar, navBarItems } = useStyles(HasScrolled())
+  const { navBar, navBarItems, auxToolbar } = useStyles(HasScrolled())
 
-  // TODO: Drawer starts below appbar
   return (
     <AppBar>
       <Toolbar className={navBar}>
@@ -99,12 +108,30 @@ const NavBar = () => {
             <Button onClick={() => setOpen(!open)}>
               <MenuIcon />
             </Button>
-            <Drawer anchor="top" open={open} onClose={() => setOpen(false)}>
-              <MenuItems mobile top={HasScrolled()} />
+            <Drawer
+              variant="persistent"
+              anchor="top"
+              open={open}
+              onClose={() => setOpen(false)}
+            >
+              <Toolbar className={auxToolbar}>
+                <Link href="#hero" onClick={() => setOpen(false)}>
+                  <img
+                    src="/logo.webp"
+                    alt="Aitor Velasco - Front End Developer"
+                    width="50"
+                    height="50"
+                  />
+                </Link>
+                <Button onClick={() => setOpen(!open)}>
+                  <MenuIcon />
+                </Button>
+              </Toolbar>
+              <MenuItems mobile top={HasScrolled()} handleOpen={setOpen}  />
             </Drawer>
           </Hidden>
           <Hidden smDown>
-            <MenuItems top={HasScrolled()} />
+            <MenuItems top={HasScrolled()} handleOpen={setOpen} />
           </Hidden>
         </Box>
       </Toolbar>

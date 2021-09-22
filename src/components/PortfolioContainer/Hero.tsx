@@ -23,7 +23,7 @@ const Hero = () => {
     const { hero, me } = useStyles()
   return (
     <Box className={hero} id="hero">
-        <Box>
+        <Box pl={2}>
           <Typography variant="h1" color="textSecondary">
             Hola, soy Aitor Velasco
           </Typography>

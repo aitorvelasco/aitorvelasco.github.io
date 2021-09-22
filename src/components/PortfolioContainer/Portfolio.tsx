@@ -1,44 +1,81 @@
-import { Box, Container, Typography, makeStyles } from '@material-ui/core'
+import {
+  Box,
+  Button,
+  Container,
+  Typography,
+  makeStyles,
+} from '@material-ui/core'
+
+import { works } from '../../data'
 
 const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   section: {
     scrollMarginTop: '68px',
     paddingTop: spacing(2),
-    paddingBottom: spacing(2)
+    paddingBottom: spacing(2),
   },
   portfolio: {
     display: 'grid',
+    gap: 8,
     gridTemplateColumns: '1fr',
     [breakpoints.up('sm')]: {
       gridTemplateColumns: '1fr 1fr',
     },
-
+  },
+  infoBox: {
+    position: 'relative',
     '& img': {
       width: '100%',
       '&:hover': {
-          opacity: 0.2
-      }
+        opacity: 0.2,
+      },
     },
+  },
+  info: {
+    position: 'absolute',
+    top: '20%',
+    display: 'none',
   },
 }))
 
-// TODO: Stylish this component to beautify
+const Work = ({ src, name, description, url }) => {
+  const { infoBox, info } = useStyles()
+  return (
+    <Box className={infoBox}>
+      <img src={src} alt={name} />
+      <Box className={info}>
+        <Typography variant="h3" align="center">
+          {name}
+        </Typography>
+        <Typography align="center">{description}</Typography>
+        <Button variant="contained" href={url}>Descubrir</Button>
+      </Box>
+    </Box>
+  )
+}
+
 const Portfolio = () => {
   const { section, portfolio } = useStyles()
   return (
-    <>
+    <Box bgcolor="grey.500" color="white">
       <Container maxWidth="md" id="portfolio" className={section}>
         <Typography variant="h2">Portfolio</Typography>
       </Container>
-      <Box className={portfolio}>
-        <img src="/portfolio/llamaya.png" />
-        <img src="/portfolio/masmovil.png" />
-        <img src="/portfolio/bq-store.png" />
-        <img src="/portfolio/diwo.png" />
-        <img src="/portfolio/bqcom.png" />
-        <img src="/portfolio/sara-foto.jpg" />
+      <Box className={portfolio} my={2}>
+        {works.map(({ src, name, description, url }) => (
+          <Work
+            key={name}
+            src={src}
+            name={name}
+            description={description}
+            url={url}
+          />
+        ))}
       </Box>
-    </>
+      <Typography variant="h3" align="center">
+        Y más allá
+      </Typography>
+    </Box>
   )
 }
 
