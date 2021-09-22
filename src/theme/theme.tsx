@@ -43,6 +43,18 @@ const theme = createTheme({
           fontSize: '36px'
         }
       },
+      h4: {
+        fontFamily: font.primary,
+      },
+      h5: {
+        fontFamily: font.primary,
+      },
+      h6: {
+        fontFamily: font.primary,
+      },
+      subtitle1: {
+        fontFamily: font.secondary,
+      },
       body1: {
         fontFamily: font.secondary,
       },

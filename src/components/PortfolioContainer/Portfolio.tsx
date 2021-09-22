@@ -24,17 +24,24 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   },
   infoBox: {
     position: 'relative',
+
     '& img': {
       width: '100%',
       '&:hover': {
         opacity: 0.2,
       },
     },
+    '&:hover $info': {
+      visibility: 'visible',
+    },
   },
   info: {
     position: 'absolute',
-    top: '20%',
-    display: 'none',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    textAlign: 'center',
+    visibility: 'hidden',
   },
 }))
 
@@ -44,11 +51,11 @@ const Work = ({ src, name, description, url }) => {
     <Box className={infoBox}>
       <img src={src} alt={name} />
       <Box className={info}>
-        <Typography variant="h3" align="center">
-          {name}
-        </Typography>
-        <Typography align="center">{description}</Typography>
-        <Button variant="contained" href={url}>Descubrir</Button>
+        <Typography variant="subtitle1">{name}</Typography>
+        <Typography gutterBottom>{description}</Typography>
+        <Button variant="contained" href={url} target="_blank">
+          Descubrir
+        </Button>
       </Box>
     </Box>
   )
@@ -59,7 +66,9 @@ const Portfolio = () => {
   return (
     <Box bgcolor="grey.500" color="white">
       <Container maxWidth="md" id="portfolio" className={section}>
-        <Typography variant="h2">Portfolio</Typography>
+        <Typography align="center" variant="h2">
+          Portfolio
+        </Typography>
       </Container>
       <Box className={portfolio} my={2}>
         {works.map(({ src, name, description, url }) => (

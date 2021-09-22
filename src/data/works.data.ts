@@ -15,7 +15,7 @@ const works = [
     src: '/portfolio/bq-store.png',
     name: 'BQ STORE',
     description: 'eShop de BQ',
-    url: 'https://store.bq.com',
+    url: 'http://web.archive.org/web/20170515081151/https://store.bq.com/es',
   },
   {
     src: '/portfolio/diwo.png',
@@ -27,7 +27,7 @@ const works = [
     src: '/portfolio/bqcom.png',
     name: 'BQ.COM',
     description: 'Web principal de BQ',
-    url: 'https://www.bq.com',
+    url: 'http://web.archive.org/web/20180703153853/https://www.bq.com/es',
   },
   {
     src: '/portfolio/sara-foto.jpg',
