@@ -31,7 +31,7 @@ const works = [
   },
   {
     src: '/portfolio/sara-foto.jpg',
-    name: 'SARA MONTOYA FOTOGRAFIA',
+    name: 'SM FOTOGRAFIA',
     description: 'Sitio web de reportajes fotográficos',
     url: 'http://web.archive.org/web/20170806024303/http://saramontoyafotografia.com',
   },

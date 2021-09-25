@@ -31,7 +31,7 @@ const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
       transition: '.3s',
       visibility: 'visible',
       backgroundColor: palette.grey[500],
-      opacity: 0.9
+      opacity: 0.9,
     },
   },
   info: {
@@ -54,11 +54,21 @@ const Work = ({ src, name, description, url }) => {
     <Box className={infoBox}>
       <img src={src} alt={name} />
       <Box className={info}>
-        <Typography variant="subtitle1">{name}</Typography>
-        <Typography gutterBottom>{description}</Typography>
-        <Button variant="contained" href={url} target="_blank">
-          Descubrir
-        </Button>
+        <Box
+          display="flex"
+          flexDirection="column"
+          textAlign="center"
+          alignItems= "center"
+          border={1}
+          borderRadius={10}
+          p={2}
+        >
+          <Typography variant="subtitle1">{name}</Typography>
+          <Typography gutterBottom>{description}</Typography>
+          <Button variant="contained" href={url} target="_blank">
+            Descubrir
+          </Button>
+        </Box>
       </Box>
     </Box>
   )
@@ -85,7 +95,7 @@ const Portfolio = () => {
         ))}
       </Box>
       <Typography variant="h3" align="center">
-        Y más allá
+        👨🏻‍💻
       </Typography>
     </Box>
   )
