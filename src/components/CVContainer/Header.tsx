@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Box, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
@@ -8,7 +9,7 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     [breakpoints.up('lg')]: {
       marginBottom: spacing(-4.5),
       background: `linear-gradient(16.8deg, ${palette.common.white} 50%, ${palette.common.black} 50%)`,
-    }
+    },
   },
   me: {
     border: '4px solid',
@@ -25,13 +26,17 @@ const Header = () => {
       alignItems="center"
       className={triangle}
     >
-      <img
-        className={me}
-        src="/its-a-me.jpg"
-        alt="Aitor Velasco"
-        width="150"
-        height="150"
-      />
+      <Link href="/">
+        <a>
+          <img
+            className={me}
+            src="/its-a-me.webp"
+            alt="Aitor Velasco"
+            width="150"
+            height="150"
+          />
+        </a>
+      </Link>
     </Box>
   )
 }

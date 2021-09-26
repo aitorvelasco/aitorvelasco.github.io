@@ -22,9 +22,10 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     }
   },
   me: {
-    alignSelf: 'flex-end',
-    justifySelf: 'end',
-    maxWidth: '70vw',
+    // alignSelf: 'flex-end',
+    // justifySelf: 'end',
+    // maxWidth: '70vw',
+    borderRadius: '50%'
   },
 }))
 
@@ -54,7 +55,7 @@ const Hero = () => {
           </Link>
         </Box>
       </Box>
-      <img className={me} src="/hero-pic.png" />
+      <img className={me} alt="me" src="/its-a-me.webp" />
     </Box>
   )
 }

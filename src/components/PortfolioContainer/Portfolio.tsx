@@ -31,7 +31,7 @@ const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
       transition: '.3s',
       visibility: 'visible',
       backgroundColor: palette.grey[500],
-      opacity: 0.9,
+      opacity: 0.95,
     },
   },
   info: {
@@ -65,7 +65,7 @@ const Work = ({ src, name, description, url }) => {
         >
           <Typography variant="subtitle1">{name}</Typography>
           <Typography gutterBottom>{description}</Typography>
-          <Button variant="contained" href={url} target="_blank">
+          <Button variant="contained" href={url} target="_blank" rel="noopener noreferrer">
             Descubrir
           </Button>
         </Box>

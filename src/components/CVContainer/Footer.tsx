@@ -21,7 +21,7 @@ const Footer = () => {
     >
       <img
         className={logo}
-        src="/logo.jpg"
+        src="/logo-w.webp"
         alt="Aitor Velasco - Senior Front End Developer"
         width="150"
         height="150"

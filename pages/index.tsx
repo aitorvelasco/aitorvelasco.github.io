@@ -1,47 +1,41 @@
-import { Container, Grid, Hidden, makeStyles } from '@material-ui/core'
+import { Container, makeStyles } from '@material-ui/core'
 
-import { Aside, Curriculum, Footer, Header } from '../src/components'
+import {
+  About,
+  ContactForm,
+  Hero,
+  NavBar,
+  Portfolio,
+  Skills,
+  RRSS,
+} from '../src/components'
 
-const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
-  wrapper: {
-    boxShadow: '-10px 10px',
-    backgroundColor: palette.common.white,
-    overflow: 'hidden',
-    padding: 0,
-    margin: spacing(4, 'auto'),
-  },
-  container: {
-    [breakpoints.down('xs')]: {
-      paddingLeft: spacing(1.5),
-      paddingRight: spacing(1.5),
-    },
+const useStyles = makeStyles(({ spacing, breakpoints }) => ({
+  section: {
+    paddingTop: spacing(2),
+    paddingBottom: spacing(2),
+    scrollMarginTop: '56px',
+    [breakpoints.up('md')]:{
+      scrollMarginTop: '64px', 
+    }
   },
 }))
 
-const Home = () => {
-  const { wrapper, container } = useStyles()
+const PortfolioContainer = () => {
+  const { section } = useStyles()
   return (
-    <Container maxWidth={false}>
-      <Container maxWidth="lg" className={wrapper}>
-      <Header />
-      <Container maxWidth={false} className={container}>
-        <Grid container spacing={4}>
-          <Hidden mdDown>
-            <Grid item xs={2}>
-              <Aside />
-            </Grid>
-          </Hidden>
-          <Grid item lg={9}>
-            <Curriculum />
-          </Grid>
-        </Grid>
+    <>
+      <NavBar />
+      <Hero />
+      <About />
+      <Container maxWidth="md" id="skills" className={section}>
+        <Skills />
       </Container>
-      <Hidden lgUp>
-        <Footer />
-      </Hidden>
-      </Container>
-    </Container>
+      <Portfolio />
+      <ContactForm />
+      <RRSS />
+    </>
   )
 }
 
-export default Home
+export default PortfolioContainer

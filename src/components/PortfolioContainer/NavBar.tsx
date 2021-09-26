@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import {
   AppBar,
   Box,
@@ -7,7 +8,6 @@ import {
   Hidden,
   Toolbar,
   Button,
-  Link,
   useScrollTrigger,
 } from '@material-ui/core'
 
@@ -30,8 +30,8 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     },
   },
   auxToolbar: {
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 }))
 
 const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
@@ -71,11 +71,9 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
     <Button
       variant={mobile ? 'contained' : 'outlined'}
       color={top || mobile ? 'default' : 'primary'}
-      href="/"
-      target="_blank"
       onClick={() => handleOpen(false)}
     >
-      Ver CV
+      <Link href="/curriculum">Ver CV</Link>
     </Button>
   </>
 )
@@ -95,14 +93,14 @@ const NavBar = () => {
   return (
     <AppBar>
       <Toolbar className={navBar}>
-        <Link href="#hero">
+        <a href="#hero">
           <img
-            src="/logo.webp"
+            src="/logo-t.webp"
             alt="Aitor Velasco - Front End Developer"
             width="50"
             height="50"
           />
-        </Link>
+        </a>
         <Box className={navBarItems}>
           <Hidden mdUp>
             <Button onClick={() => setOpen(!open)}>
@@ -115,19 +113,19 @@ const NavBar = () => {
               onClose={() => setOpen(false)}
             >
               <Toolbar className={auxToolbar}>
-                <Link href="#hero" onClick={() => setOpen(false)}>
+                <a href="#hero" onClick={() => setOpen(false)}>
                   <img
-                    src="/logo.webp"
+                    src="/logo-t.webp"
                     alt="Aitor Velasco - Front End Developer"
                     width="50"
                     height="50"
                   />
-                </Link>
+                </a>
                 <Button onClick={() => setOpen(!open)}>
                   <MenuIcon />
                 </Button>
               </Toolbar>
-              <MenuItems mobile top={HasScrolled()} handleOpen={setOpen}  />
+              <MenuItems mobile top={HasScrolled()} handleOpen={setOpen} />
             </Drawer>
           </Hidden>
           <Hidden smDown>
