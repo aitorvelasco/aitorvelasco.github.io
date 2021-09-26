@@ -14,7 +14,7 @@ const Aside = () => {
   const { name } = useStyles()
   return (
     <>
-      <Typography className={name}>Aitor&nbsp;Velasco</Typography>
+      <Typography component="h1" className={name}>Aitor&nbsp;Velasco</Typography>
 
       <Typography component="p" variant="caption">
         Aitor Velasco
