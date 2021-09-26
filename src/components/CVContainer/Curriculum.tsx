@@ -5,7 +5,7 @@ import Skills from './Skills'
 const Curriculum = () => {
   return (
     <>
-      <Typography paragraph variant="h2">
+      <Typography variant="h2">
         Sobre mi
       </Typography>
       <Typography paragraph align="justify">
@@ -23,7 +23,7 @@ const Curriculum = () => {
 
       <Skills />
 
-      <Typography paragraph variant="h2">
+      <Typography variant="h2">
         Experiencia
       </Typography>
       <Typography variant="h3">Grupo Masmovil</Typography>
@@ -78,7 +78,7 @@ const Curriculum = () => {
         ofrecía refuerzo para el blog y el portal principal de la marca, BQcom.
       </Typography>
 
-      <Typography paragraph variant="h2">
+      <Typography variant="h2">
         Estudios
       </Typography>
       <Typography variant="h3">CICE</Typography>

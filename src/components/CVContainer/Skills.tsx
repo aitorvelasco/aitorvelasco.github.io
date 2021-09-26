@@ -34,7 +34,7 @@ const Skills = () => {
   const { skillsBox, skill } = useStyles()
   return (
     <>
-      <Typography paragraph variant="h2">
+      <Typography variant="h2">
         Habilidades
       </Typography>
       <Box className={skillsBox} mb={2}>

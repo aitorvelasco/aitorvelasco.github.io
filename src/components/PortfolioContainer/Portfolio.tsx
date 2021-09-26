@@ -94,7 +94,7 @@ const Portfolio = () => {
           />
         ))}
       </Box>
-      <Typography variant="h3" align="center">
+      <Typography variant="h3" component="p" align="center">
         👨🏻‍💻
       </Typography>
     </Box>
