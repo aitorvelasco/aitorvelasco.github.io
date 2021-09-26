@@ -104,6 +104,7 @@ const ContactForm = () => {
                 margin="normal"
                 variant="outlined"
                 label="Nombre"
+                placeholder="Nombre"
                 error={!!errors.name}
                 helperText={errors.name ? errors.name.message : ''}
                 required
@@ -121,6 +122,7 @@ const ContactForm = () => {
                 margin="normal"
                 variant="outlined"
                 label="Email"
+                placeholder="Email"
                 error={!!errors.email}
                 helperText={errors.email ? errors.email.message : ''}
                 required
@@ -141,6 +143,7 @@ const ContactForm = () => {
                 type="tel"
                 inputProps={{ maxLength: 9 }}
                 label="Teléfono"
+                placeholder="Telefono"
                 error={!!errors.phone}
                 helperText={errors.phone ? errors.phone.message : ''}
               />
@@ -160,6 +163,7 @@ const ContactForm = () => {
                 multiline
                 minRows={5}
                 label="Mensaje"
+                placeholder="Mensaje"
                 error={!!errors.message}
                 helperText={errors.message ? errors.message.message : ''}
                 required
