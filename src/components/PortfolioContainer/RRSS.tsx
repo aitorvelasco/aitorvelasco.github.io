@@ -12,11 +12,12 @@ const RRSS = () => (
     color="white"
   >
     <Box>
-      <Link href="mailto:aitorvelascodev@gmail.com">
+      <Link href="mailto:aitorvelascodev@gmail.com" aria-label="Email">
         <EmailIcon />
       </Link>
       <Link
         href="https://www.linkedin.com/in/aitor-velasco-ovejero-91a0094b"
+        aria-label="LinkedIn"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -24,6 +25,7 @@ const RRSS = () => (
       </Link>
       <Link
         href="https://github.com/aitorvelasco"
+        aria-label="GitHub"
         target="_blank"
         rel="noopener noreferrer"
       >

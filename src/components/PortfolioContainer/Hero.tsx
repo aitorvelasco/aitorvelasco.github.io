@@ -42,11 +42,12 @@ const Hero = () => {
           Front End Developer
         </Typography>
         <Box className={hey}>
-          <Link href="mailto:aitorvelascodev@gmail.com">
+          <Link href="mailto:aitorvelascodev@gmail.com" aria-label="Email">
             <EmailIcon />
           </Link>
           <Link
             href="https://www.linkedin.com/in/aitor-velasco-ovejero-91a0094b"
+            aria-label="LinkedIn"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -54,6 +55,7 @@ const Hero = () => {
           </Link>
           <Link
             href="https://github.com/aitorvelasco"
+            aria-label="GitHub"
             target="_blank"
             rel="noopener noreferrer"
           >

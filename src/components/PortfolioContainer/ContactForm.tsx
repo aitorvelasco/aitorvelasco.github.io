@@ -95,6 +95,7 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <Controller
             name="name"
+            aria-labelledby="Nombre"
             control={control}
             defaultValue=""
             render={({ field }) => (
@@ -112,6 +113,7 @@ const ContactForm = () => {
           />
           <Controller
             name="email"
+            aria-labelledby="Email"
             control={control}
             defaultValue=""
             render={({ field }) => (
@@ -130,6 +132,7 @@ const ContactForm = () => {
 
           <Controller
             name="phone"
+            aria-labelledby="Teléfono"
             control={control}
             defaultValue=""
             render={({ field }) => (
@@ -149,6 +152,7 @@ const ContactForm = () => {
 
           <Controller
             name="message"
+            aria-labelledby="Mensaje"
             control={control}
             defaultValue=""
             render={({ field }) => (
