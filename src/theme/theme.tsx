@@ -8,13 +8,13 @@ const theme = createTheme({
     ...globalStyles,
     palette: {
       primary: {
-        main: '#95b7df',
+        main: '#4298e2',
       },
       secondary: {
         main: '#585858',
       },
       text: {
-        secondary: '#24558a'
+        secondary: '#24398a'
       },
       grey: {
         500: '#202327'
