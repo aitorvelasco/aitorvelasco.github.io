@@ -103,7 +103,7 @@ const NavBar = () => {
         </a>
         <Box className={navBarItems}>
           <Hidden mdUp>
-            <Button onClick={() => setOpen(!open)}>
+            <Button aria-label="menu" onClick={() => setOpen(!open)}>
               <MenuIcon />
             </Button>
             <Drawer
@@ -121,7 +121,7 @@ const NavBar = () => {
                     height="50"
                   />
                 </a>
-                <Button onClick={() => setOpen(!open)}>
+                <Button aria-label="menu" onClick={() => setOpen(!open)}>
                   <MenuIcon />
                 </Button>
               </Toolbar>

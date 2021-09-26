@@ -18,10 +18,15 @@ const RRSS = () => (
       <Link
         href="https://www.linkedin.com/in/aitor-velasco-ovejero-91a0094b"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <LinkedInIcon />
       </Link>
-      <Link href="https://github.com/aitorvelasco" target="_blank">
+      <Link
+        href="https://github.com/aitorvelasco"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <GithubIcon />
       </Link>
     </Box>
