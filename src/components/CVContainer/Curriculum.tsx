@@ -38,6 +38,7 @@ const Curriculum = () => {
           color="inherit"
           href="https://www.grupomasmovil.com"
           target="_blank"
+          rel="noopener noreferrer"
         >
           https://www.grupomasmovil.com
         </Link>
@@ -59,7 +60,12 @@ const Curriculum = () => {
         4 de noviembre 2015 - 10 de febrero de 2019
       </Typography>
       <Typography color="textSecondary" gutterBottom>
-        <Link color="inherit" href="https://www.bq.com" target="_blank">
+        <Link
+          color="inherit"
+          href="https://www.bq.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           https://www.bq.com
         </Link>
       </Typography>
@@ -81,7 +87,12 @@ const Curriculum = () => {
       </Typography>
       <Typography color="secondary">Noviembre 2014 - Junio 2015</Typography>
       <Typography paragraph color="textSecondary">
-        <Link href="https://www.cice.es" target="_blank" color="inherit">
+        <Link
+          href="https://www.cice.es"
+          target="_blank"
+          color="inherit"
+          rel="noopener noreferrer"
+        >
           https://www.cice.es
         </Link>
       </Typography>
@@ -93,6 +104,7 @@ const Curriculum = () => {
           color="textSecondary"
           href="https://www.saramontoyafotografia.com"
           target="_blank"
+          rel="noopener noreferrer"
         >
           https://www.saramontoyafotografia.com
         </Link>
@@ -104,7 +116,12 @@ const Curriculum = () => {
       </Typography>
       <Typography color="secondary">Octubre 2010 - Julio 2014</Typography>
       <Typography paragraph color="textSecondary">
-        <Link color="inherit" href="https://www.urjc.es" target="_blank">
+        <Link
+          color="inherit"
+          href="https://www.urjc.es"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           https://www.urjc.es
         </Link>
       </Typography>

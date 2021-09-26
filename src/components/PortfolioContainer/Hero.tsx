@@ -9,6 +9,7 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     justifyItems: 'center',
     gridTemplateColumns: '50% 50%',
     height: `calc(70vh - ${spacing(7)}px)`,
+    minHeight: '320px',
     background: `linear-gradient(110deg, ${palette.secondary.main} 50%, ${palette.common.black} 50%)`,
     [breakpoints.up('md')]: {
       height: `calc(100vh - ${spacing(8)}px)`,
@@ -19,13 +20,13 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     display: 'flex',
     [breakpoints.up('md')]: {
       justifyContent: 'flex-end',
-    }
+    },
   },
   me: {
     // alignSelf: 'flex-end',
     // justifySelf: 'end',
     // maxWidth: '70vw',
-    borderRadius: '50%'
+    borderRadius: '50%',
   },
 }))
 
@@ -55,7 +56,13 @@ const Hero = () => {
           </Link>
         </Box>
       </Box>
-      <img className={me} alt="me" src="/its-a-me.webp" />
+      <img
+        className={me}
+        alt="me"
+        width="150"
+        height="150"
+        src="/its-a-me.webp"
+      />
     </Box>
   )
 }
