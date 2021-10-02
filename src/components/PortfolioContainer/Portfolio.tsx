@@ -5,6 +5,8 @@ import {
   Typography,
 } from '@mui/material'
 
+import Image from 'next/image'
+
 import { makeStyles } from '@mui/styles'
 
 import { works } from '../../data'
@@ -53,7 +55,7 @@ const Work = ({ src, name, description, url }) => {
   const { infoBox, info } = useStyles()
   return (
     <Box className={infoBox}>
-      <img src={src} alt={name} />
+      <Image src={src} alt={name} width={1280} height={640} />
       <Box className={info}>
         <Box
           display="flex"

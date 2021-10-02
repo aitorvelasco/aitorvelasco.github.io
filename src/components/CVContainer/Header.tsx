@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { Box } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 
+import Image from 'next/image'
+
 const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
   triangle: {
     height: '300px',
@@ -13,7 +15,7 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     },
   },
   me: {
-    border: '4px solid',
+    border: '4px solid !important',
     borderRadius: '50%',
   },
 }))
@@ -29,12 +31,12 @@ const Header = () => {
     >
       <Link href="/">
         <a>
-          <img
+          <Image
             className={me}
             src="/its-a-me.webp"
             alt="Aitor Velasco"
-            width="150"
-            height="150"
+            width={150}
+            height={150}
           />
         </a>
       </Link>

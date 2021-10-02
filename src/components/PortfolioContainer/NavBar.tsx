@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   AppBar,
   Box,
@@ -39,7 +40,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
   <>
     <Button
       variant="text"
-      color={top || mobile ? 'inherit' : 'primary'}
+      color={top || mobile ? 'secondary' : 'primary'}
       href="#aboutme"
       onClick={() => handleOpen(false)}
     >
@@ -47,7 +48,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
     </Button>
     <Button
       variant="text"
-      color={top || mobile ? 'inherit' : 'primary'}
+      color={top || mobile ? 'secondary' : 'primary'}
       href="#skills"
       onClick={() => handleOpen(false)}
     >
@@ -55,7 +56,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
     </Button>
     <Button
       variant="text"
-      color={top || mobile ? 'inherit' : 'primary'}
+      color={top || mobile ? 'secondary' : 'primary'}
       href="#portfolio"
       onClick={() => handleOpen(false)}
     >
@@ -63,7 +64,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
     </Button>
     <Button
       variant="text"
-      color={top || mobile ? 'inherit' : 'primary'}
+      color={top || mobile ? 'secondary' : 'primary'}
       href="#contact"
       onClick={() => handleOpen(false)}
     >
@@ -71,7 +72,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
     </Button>
     <Button
       variant={mobile ? 'contained' : 'outlined'}
-      color={top || mobile ? 'inherit' : 'primary'}
+      color={top || mobile ? 'secondary' : 'primary'}
       onClick={() => handleOpen(false)}
     >
       <Link href="/curriculum">Ver CV</Link>
@@ -95,11 +96,11 @@ const NavBar = () => {
     <AppBar>
       <Toolbar className={navBar}>
         <a href="#hero">
-          <img
+          <Image
             src="/logo-t.webp"
             alt="Aitor Velasco - Front End Developer"
-            width="50"
-            height="50"
+            width={50}
+            height={50}
           />
         </a>
         <Box className={navBarItems}>
@@ -115,11 +116,11 @@ const NavBar = () => {
             >
               <Toolbar className={auxToolbar}>
                 <a href="#hero" onClick={() => setOpen(false)}>
-                  <img
+                  <Image
                     src="/logo-t.webp"
                     alt="Aitor Velasco - Front End Developer"
-                    width="50"
-                    height="50"
+                    width={50}
+                    height={50}
                   />
                 </a>
                 <Button aria-label="menu" onClick={() => setOpen(!open)}>
