@@ -1,4 +1,5 @@
-import { Container, Grid, Hidden, makeStyles } from '@material-ui/core'
+import { Container, Grid, Hidden } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 
 import { Aside, Curriculum, Footer, Header } from '../../src/components'
 
@@ -26,7 +27,7 @@ const Home = () => {
       <Header />
       <Container maxWidth={false} className={container}>
         <Grid container spacing={4}>
-          <Hidden mdDown>
+          <Hidden lgDown>
             <Grid item xs={2}>
               <Aside />
             </Grid>

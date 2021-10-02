@@ -1,4 +1,5 @@
-import { Box, Typography, Link, makeStyles } from '@material-ui/core'
+import { Box, Typography, Link } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 
 import { LinkedInIcon, GithubIcon, EmailIcon } from '../assets'
 
@@ -8,11 +9,11 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     alignItems: 'center',
     justifyItems: 'center',
     gridTemplateColumns: '50% 50%',
-    height: `calc(70vh - ${spacing(7)}px)`,
+    height: `calc(70vh - ${spacing(7)})`,
     minHeight: '320px',
     background: `linear-gradient(110deg, ${palette.secondary.main} 50%, ${palette.common.black} 50%)`,
     [breakpoints.up('md')]: {
-      height: `calc(100vh - ${spacing(8)}px)`,
+      height: `calc(100vh - ${spacing(8)})`,
     },
   },
   hey: {

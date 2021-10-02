@@ -1,6 +1,7 @@
-import { Box, Container, Typography, makeStyles } from '@material-ui/core'
+import { Box, Container, Typography } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 
-const useStyles = makeStyles(({ palette}) => ({
+const useStyles = makeStyles(({ palette }) => ({
   bg: {
     color: 'white',
     background: `linear-gradient(57deg, ${palette.common.black} 50%, ${palette.secondary.main} 50%)`,

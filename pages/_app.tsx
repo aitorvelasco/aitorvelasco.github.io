@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { ThemeProvider, CssBaseline } from '@material-ui/core'
+import { ThemeProvider, CssBaseline } from '@mui/material'
 import { theme } from '../src/theme'
 
 function MyApp({ Component, pageProps }) {

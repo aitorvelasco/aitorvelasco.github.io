@@ -3,8 +3,9 @@ import {
   Button,
   Container,
   Typography,
-  makeStyles,
-} from '@material-ui/core'
+} from '@mui/material'
+
+import { makeStyles } from '@mui/styles'
 
 import { works } from '../../data'
 
@@ -65,7 +66,7 @@ const Work = ({ src, name, description, url }) => {
         >
           <Typography variant="subtitle1">{name}</Typography>
           <Typography gutterBottom>{description}</Typography>
-          <Button variant="contained" href={url} target="_blank" rel="noopener noreferrer">
+          <Button sx={{ bgcolor: '#e0e0e0', color: 'black', ":hover": { bgcolor: '#e0e0e0' }}} variant="contained" href={url} target="_blank" rel="noopener noreferrer">
             Descubrir
           </Button>
         </Box>

@@ -4,12 +4,13 @@ import {
   AppBar,
   Box,
   Drawer,
-  makeStyles,
   Hidden,
   Toolbar,
   Button,
   useScrollTrigger,
-} from '@material-ui/core'
+} from '@mui/material'
+
+import { makeStyles } from '@mui/styles'
 
 import { MenuIcon } from '../assets'
 
@@ -38,7 +39,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
   <>
     <Button
       variant="text"
-      color={top || mobile ? 'default' : 'primary'}
+      color={top || mobile ? 'inherit' : 'primary'}
       href="#aboutme"
       onClick={() => handleOpen(false)}
     >
@@ -46,7 +47,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
     </Button>
     <Button
       variant="text"
-      color={top || mobile ? 'default' : 'primary'}
+      color={top || mobile ? 'inherit' : 'primary'}
       href="#skills"
       onClick={() => handleOpen(false)}
     >
@@ -54,7 +55,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
     </Button>
     <Button
       variant="text"
-      color={top || mobile ? 'default' : 'primary'}
+      color={top || mobile ? 'inherit' : 'primary'}
       href="#portfolio"
       onClick={() => handleOpen(false)}
     >
@@ -62,7 +63,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
     </Button>
     <Button
       variant="text"
-      color={top || mobile ? 'default' : 'primary'}
+      color={top || mobile ? 'inherit' : 'primary'}
       href="#contact"
       onClick={() => handleOpen(false)}
     >
@@ -70,7 +71,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
     </Button>
     <Button
       variant={mobile ? 'contained' : 'outlined'}
-      color={top || mobile ? 'default' : 'primary'}
+      color={top || mobile ? 'inherit' : 'primary'}
       onClick={() => handleOpen(false)}
     >
       <Link href="/curriculum">Ver CV</Link>
@@ -128,7 +129,7 @@ const NavBar = () => {
               <MenuItems mobile top={HasScrolled()} handleOpen={setOpen} />
             </Drawer>
           </Hidden>
-          <Hidden smDown>
+          <Hidden mdDown>
             <MenuItems top={HasScrolled()} handleOpen={setOpen} />
           </Hidden>
         </Box>

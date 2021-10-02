@@ -7,10 +7,10 @@ import {
   TextField,
   Typography,
   Snackbar,
-  makeStyles,
-} from '@material-ui/core'
+  Alert
+} from '@mui/material'
 
-import { Alert } from '@material-ui/lab'
+import { makeStyles } from '@mui/styles'
 
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -179,15 +179,16 @@ const ContactForm = () => {
 
         <Snackbar
           open={open}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
           autoHideDuration={5000}
           onClose={() => setOpen(false)}
         >
           {statusOk ? (
-            <Alert severity="success">
+            <Alert variant="filled" severity="success">
               Formulario enviado. ¡Pronto nos pondremos en contacto!
             </Alert>
           ) : (
-            <Alert severity="error">
+            <Alert variant="filled" severity="error">
               Se ha producido un error en el envío de los datos.
             </Alert>
           )}
