@@ -1,8 +1,6 @@
 import { Box } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 
-import Image from 'next/image'
-
 const useStyles = makeStyles(() => ({
   logo: {
     transform: 'translateY(-50%)',
@@ -23,7 +21,7 @@ const Footer = () => {
       bgcolor="black"
       height="150px"
     >
-      <Image
+      <img
         className={logo}
         src="/logo-w.webp"
         alt="Aitor Velasco - Senior Front End Developer"

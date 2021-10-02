@@ -1,8 +1,6 @@
 import { Box, Typography, Link } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 
-import Image from 'next/image'
-
 import { LinkedInIcon, GithubIcon, EmailIcon } from '../assets'
 
 const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
@@ -66,7 +64,7 @@ const Hero = () => {
           </Link>
         </Box>
       </Box>
-      <Image
+      <img
         className={me}
         alt="me"
         width={150}

@@ -5,8 +5,6 @@ import {
   Typography,
 } from '@mui/material'
 
-import Image from 'next/image'
-
 import { makeStyles } from '@mui/styles'
 
 import { works } from '../../data'
@@ -21,7 +19,7 @@ const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
     display: 'grid',
     gap: 8,
     gridTemplateColumns: '1fr',
-    [breakpoints.up('sm')]: {
+    [breakpoints.up('md')]: {
       gridTemplateColumns: '1fr 1fr',
     },
   },
@@ -55,7 +53,7 @@ const Work = ({ src, name, description, url }) => {
   const { infoBox, info } = useStyles()
   return (
     <Box className={infoBox}>
-      <Image src={src} alt={name} width={1280} height={640} />
+      <img src={src} alt={name} />
       <Box className={info}>
         <Box
           display="flex"

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import {
   AppBar,
   Box,
@@ -96,7 +95,7 @@ const NavBar = () => {
     <AppBar>
       <Toolbar className={navBar}>
         <a href="#hero">
-          <Image
+          <img
             src="/logo-t.webp"
             alt="Aitor Velasco - Front End Developer"
             width={50}
@@ -116,7 +115,7 @@ const NavBar = () => {
             >
               <Toolbar className={auxToolbar}>
                 <a href="#hero" onClick={() => setOpen(false)}>
-                  <Image
+                  <img
                     src="/logo-t.webp"
                     alt="Aitor Velasco - Front End Developer"
                     width={50}
