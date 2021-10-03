@@ -35,49 +35,60 @@ const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
   },
 }))
 
-const MenuItems = ({ mobile = false, top = true, handleOpen }) => (
+const MenuItems = ({ mobile = false, top = true, handleOpen }) => {
+  return (
   <>
     <Button
       variant="text"
       color={top || mobile ? 'secondary' : 'primary'}
-      href="#aboutme"
-      onClick={() => handleOpen(false)}
+      onClick={() => {
+        handleOpen(false)
+        document.getElementById('aboutme').scrollIntoView()
+      }}
     >
       Sobre mi
     </Button>
     <Button
       variant="text"
       color={top || mobile ? 'secondary' : 'primary'}
-      href="#skills"
-      onClick={() => handleOpen(false)}
+      onClick={() => {
+        handleOpen(false)
+        document.getElementById('skills').scrollIntoView()
+      }}
     >
       Habilidades
     </Button>
     <Button
       variant="text"
       color={top || mobile ? 'secondary' : 'primary'}
-      href="#portfolio"
-      onClick={() => handleOpen(false)}
+      onClick={() => {
+        handleOpen(false)
+        document.getElementById('portfolio').scrollIntoView()
+      }}
     >
       Portfolio
     </Button>
     <Button
       variant="text"
       color={top || mobile ? 'secondary' : 'primary'}
-      href="#contact"
-      onClick={() => handleOpen(false)}
+      onClick={() => {
+        handleOpen(false)
+        document.getElementById('contact').scrollIntoView()
+      }}
     >
       Contacto
     </Button>
-    <Button
-      variant={mobile ? 'contained' : 'outlined'}
-      color={top || mobile ? 'secondary' : 'primary'}
-      onClick={() => handleOpen(false)}
-    >
-      <Link href="/curriculum">Ver CV</Link>
-    </Button>
+    <Link href="/curriculum" passHref>
+      <Button
+        variant={mobile ? 'contained' : 'outlined'}
+        color={top || mobile ? 'secondary' : 'primary'}
+        onClick={() => handleOpen(false)}
+      >
+      Ver CV
+      </Button>
+    </Link>
   </>
-)
+)}
 
 const NavBar = () => {
   const [open, setOpen] = useState(false)
@@ -94,14 +105,14 @@ const NavBar = () => {
   return (
     <AppBar>
       <Toolbar className={navBar}>
-        <a href="#hero">
+        <Button onClick={() => document.getElementById('hero').scrollIntoView()}>
           <img
             src="/logo-t.webp"
             alt="Aitor Velasco - Front End Developer"
             width={50}
             height={50}
           />
-        </a>
+        </Button>
         <Box className={navBarItems}>
           <Hidden mdUp>
             <Button aria-label="menu" onClick={() => setOpen(!open)}>
@@ -114,14 +125,17 @@ const NavBar = () => {
               onClose={() => setOpen(false)}
             >
               <Toolbar className={auxToolbar}>
-                <a href="#hero" onClick={() => setOpen(false)}>
+                <Button onClick={() => {
+                  document.getElementById('hero').scrollIntoView() 
+                  setOpen(false) 
+                  }}>
                   <img
                     src="/logo-t.webp"
                     alt="Aitor Velasco - Front End Developer"
                     width={50}
                     height={50}
                   />
-                </a>
+                </Button>
                 <Button aria-label="menu" onClick={() => setOpen(!open)}>
                   <MenuIcon />
                 </Button>
