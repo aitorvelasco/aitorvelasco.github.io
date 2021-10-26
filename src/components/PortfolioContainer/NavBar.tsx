@@ -8,6 +8,7 @@ import {
   Button,
   useScrollTrigger,
   useMediaQuery,
+  useTheme,
 } from '@mui/material'
 
 import { makeStyles } from '@mui/styles'
@@ -99,8 +100,8 @@ const NavBar = () => {
       threshold: 64,
     })
   }
-
-  const downMd = useMediaQuery(theme => theme.breakpoints.down('md'))
+  const theme = useTheme()
+  const downMd = useMediaQuery(theme.breakpoints.down('md'))
 
   const { navBar, navBarItems, auxToolbar } = useStyles(HasScrolled())
 
