@@ -4,10 +4,10 @@ import {
   AppBar,
   Box,
   Drawer,
-  Hidden,
   Toolbar,
   Button,
   useScrollTrigger,
+  useMediaQuery,
 } from '@mui/material'
 
 import { makeStyles } from '@mui/styles'
@@ -100,10 +100,12 @@ const NavBar = () => {
     })
   }
 
+  const downMd = useMediaQuery(theme => theme.breakpoints.down('md'))
+
   const { navBar, navBarItems, auxToolbar } = useStyles(HasScrolled())
 
   return (
-    <AppBar>
+    <AppBar color="transparent">
       <Toolbar className={navBar}>
         <Button onClick={() => document.getElementById('hero').scrollIntoView()}>
           <img
@@ -114,7 +116,8 @@ const NavBar = () => {
           />
         </Button>
         <Box className={navBarItems}>
-          <Hidden mdUp>
+          {downMd ? (
+            <>
             <Button aria-label="menu" onClick={() => setOpen(!open)}>
               <MenuIcon />
             </Button>
@@ -142,10 +145,9 @@ const NavBar = () => {
               </Toolbar>
               <MenuItems mobile top={HasScrolled()} handleOpen={setOpen} />
             </Drawer>
-          </Hidden>
-          <Hidden mdDown>
-            <MenuItems top={HasScrolled()} handleOpen={setOpen} />
-          </Hidden>
+            </>
+          ) : <MenuItems top={HasScrolled()} handleOpen={setOpen} />
+          }
         </Box>
       </Toolbar>
     </AppBar>

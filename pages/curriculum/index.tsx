@@ -1,4 +1,4 @@
-import { Container, Grid, Hidden } from '@mui/material'
+import { Box, Container, Grid } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 
 import { Aside, Curriculum, Footer, Header } from '../../src/components'
@@ -27,19 +27,17 @@ const Home = () => {
       <Header />
       <Container maxWidth={false} className={container}>
         <Grid container spacing={4}>
-          <Hidden lgDown>
             <Grid item xs={2}>
               <Aside />
             </Grid>
-          </Hidden>
           <Grid item lg={9}>
             <Curriculum />
           </Grid>
         </Grid>
       </Container>
-      <Hidden lgUp>
+      <Box sx={{ display: { xs: 'block', lg: 'none' } }}>
         <Footer />
-      </Hidden>
+      </Box>
       </Container>
     </Container>
   )

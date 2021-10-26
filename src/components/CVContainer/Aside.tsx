@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles(() => ({
@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
 const Aside = () => {
   const { name } = useStyles()
   return (
-    <>
+    <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
       <Typography component="h1" className={name}>Aitor&nbsp;Velasco</Typography>
 
       <Typography component="p" variant="caption">
@@ -26,7 +26,7 @@ const Aside = () => {
       <Typography gutterBottom component="p" variant="caption">
         aitorvelascodev@gmail.com
       </Typography>
-    </>
+    </Box>
   )
 }
 
