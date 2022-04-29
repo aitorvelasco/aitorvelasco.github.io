@@ -34,7 +34,7 @@ const RRSS = () => (
     </Box>
     <Typography>
       <Typography color="inherit" component="span" className="bold">
-        2021 - Aitor Velasco |{' '}
+        {(new Date).getFullYear()} - Aitor Velasco |{' '}
       </Typography>
       Made it with ❤️
     </Typography>
