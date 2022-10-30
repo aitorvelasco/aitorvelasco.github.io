@@ -1,27 +1,40 @@
 import { Box, Typography, Link } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 
 import { LinkedInIcon, GithubIcon, EmailIcon } from '../assets'
 
-export default function Hero() {
+const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
+  hero: {
+    display: 'grid',
+    alignItems: 'center',
+    justifyItems: 'center',
+    gridTemplateColumns: '50% 50%',
+    height: `calc(70vh - ${spacing(7)})`,
+    minHeight: '320px',
+    background: `linear-gradient(110deg, ${palette.secondary.main} 50%, ${palette.common.black} 50%)`,
+    [breakpoints.up('md')]: {
+      height: `calc(100vh - ${spacing(8)})`,
+    },
+  },
+  hey: {
+    gap: 8,
+    display: 'flex',
+    [breakpoints.up('md')]: {
+      justifyContent: 'flex-end',
+    },
+  },
+  me: {
+    // alignSelf: 'flex-end',
+    // justifySelf: 'end',
+    // maxWidth: '70vw',
+    borderRadius: '50%',
+  },
+}))
+
+const Hero = () => {
+  const { hero, hey, me } = useStyles()
   return (
-    <Box 
-      id="hero"
-      display="grid"    
-      alignItems="center"
-      justifyItems="center"
-      gridTemplateColumns="50% 50%"
-      minHeight={320}
-      sx={{
-        background: ({ palette }) => `linear-gradient(110deg, ${palette.secondary.main} 50%, ${palette.common.black} 50%)`,
-        height: { xs: "calc(70vh - 56px)", md: "calc(100vh - 64px)" },
-        '& img': {
-          borderRadius: 50,
-          // alignSelf: 'flex-end',
-          // justifySelf: 'end',
-          // maxWidth: '70vw',
-        }
-      }}
-    >
+    <Box className={hero} id="hero">
       <Box pl={2} pt={4}>
         <Typography variant="h1" color="textSecondary">
           Hola, soy Aitor Velasco
@@ -29,7 +42,7 @@ export default function Hero() {
         <Typography variant="h2" color="primary">
           Front End Developer
         </Typography>
-        <Box display="flex" gap={1} justifyContent={{md: 'flex-end'}}>
+        <Box className={hey}>
           <Link href="mailto:aitorvelascodev@gmail.com" aria-label="Email">
             <EmailIcon />
           </Link>
@@ -52,6 +65,7 @@ export default function Hero() {
         </Box>
       </Box>
       <img
+        className={me}
         alt="me"
         width={150}
         height={150}
@@ -60,3 +74,5 @@ export default function Hero() {
     </Box>
   )
 }
+
+export default Hero

@@ -2,8 +2,7 @@ import { Box, Link, Typography } from '@mui/material'
 
 import { LinkedInIcon, GithubIcon, EmailIcon } from '../assets'
 
-export default function RRSS () {
-  return (
+const RRSS = () => (
   <Box
     py={1.5}
     display="flex"
@@ -40,5 +39,6 @@ export default function RRSS () {
       Made it with ❤️
     </Typography>
   </Box>
-  )
-}
+)
+
+export default RRSS

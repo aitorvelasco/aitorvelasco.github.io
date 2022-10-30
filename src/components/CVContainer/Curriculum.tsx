@@ -2,7 +2,7 @@ import { Link, Typography } from '@mui/material'
 
 import Skills from './Skills'
 
-export default function Curriculum() {
+const Curriculum = () => {
   return (
     <>
       <Typography variant="h2">
@@ -128,3 +128,5 @@ export default function Curriculum() {
     </>
   )
 }
+
+export default Curriculum
