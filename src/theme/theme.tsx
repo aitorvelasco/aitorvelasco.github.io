@@ -1,10 +1,5 @@
-import { createTheme, Theme } from '@mui/material'
-
+import { createTheme } from '@mui/material'
 import globalStyles from './globalStyles'
-
-declare module '@mui/styles/defaultTheme' {
-  interface DefaultTheme extends Theme {}
-}
 
 const theme = createTheme({
     ...globalStyles,
