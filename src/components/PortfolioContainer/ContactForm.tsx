@@ -10,19 +10,32 @@ import {
   Alert
 } from '@mui/material'
 
-import { makeStyles } from '@mui/styles'
-
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
 import { sendEmail } from '../../services'
 
-const useStyles = makeStyles(() => ({
-  section: {
-    scrollMarginTop: '76px',
-  },
-}))
+const PHONE_REGEX = /^[6|7|8|9][0-9]{8}$/
+
+const schema = yup.object().shape({
+  name: yup
+    .string()
+    .min(3, 'El nombre y apellido debe tener más de 3 letras')
+    .required(),
+  email: yup.string().email('Debes introducir un email válido').required(),
+  phone: yup
+    .string()
+    .test(
+      'phone',
+      'Tu número de teléfono no es válido o está incompleto',
+      (phone) => !phone || PHONE_REGEX.test(phone)
+    ),
+  message: yup
+    .string()
+    .min(3, 'El mensaje debe ser más largo. ¡Cuéntame!')
+    .required(),
+})
 
 interface Inputs {
   name: string
@@ -31,31 +44,10 @@ interface Inputs {
   message: string
 }
 
-const ContactForm = () => {
+export default function ContactForm() {
   const [open, setOpen] = useState(false)
   const [disable, setDisable] = useState(false)
   const [statusOk, setStatusOk] = useState(false)
-
-  const PHONE_REGEX = /^[6|7|8|9][0-9]{8}$/
-
-  const schema = yup.object().shape({
-    name: yup
-      .string()
-      .min(3, 'El nombre y apellido debe tener más de 3 letras')
-      .required(),
-    email: yup.string().email('Debes introducir un email válido').required(),
-    phone: yup
-      .string()
-      .test(
-        'phone',
-        'Tu número de teléfono no es válido o está incompleto',
-        (phone) => !phone || PHONE_REGEX.test(phone)
-      ),
-    message: yup
-      .string()
-      .min(3, 'El mensaje debe ser más largo. ¡Cuéntame!')
-      .required(),
-  })
 
   // use Inputs interface should be works but it throws Typescript error, so temporary use any
   const {
@@ -83,11 +75,9 @@ const ContactForm = () => {
     setStatusOk(status.ok)
     setDisable(false)
   }
-
-  const { section } = useStyles()
   return (
     <Box py={2}>
-      <Container maxWidth="md" id="contact" className={section}>
+      <Container maxWidth="md" id="contact" sx={{ scrollMarginTop: 76 }}>
         <Typography color="inherit" variant="h2">
           Contacto
         </Typography>
@@ -197,5 +187,3 @@ const ContactForm = () => {
     </Box>
   )
 }
-
-export default ContactForm

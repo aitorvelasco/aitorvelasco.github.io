@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { ThemeProvider, CssBaseline } from '@mui/material'
 import { theme } from '../src/theme'
+import React from 'react'
 
 function MyApp({ Component, pageProps }) {
   return (

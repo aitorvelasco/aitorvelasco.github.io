@@ -1,21 +1,9 @@
 import { Box, Container, Typography } from '@mui/material'
-import { makeStyles } from '@mui/styles'
 
-const useStyles = makeStyles(({ palette }) => ({
-  bg: {
-    color: 'white',
-    background: `linear-gradient(57deg, ${palette.common.black} 50%, ${palette.secondary.main} 50%)`,
-  },
-  section: {
-    scrollMarginTop: '76px',
-  },
-}))
-
-const About = () => {
-  const { bg, section } = useStyles()
+export default function About() {
   return (
-    <Box className={bg} py={2}>
-      <Container maxWidth="md" id="aboutme" className={section}>
+    <Box color="white" sx={{ background: ({ palette }) => `linear-gradient(57deg, ${palette.common.black} 50%, ${palette.secondary.main} 50%)` }} py={2}>
+      <Container maxWidth="md" id="aboutme" sx={{ scrollMarginTop: 76 }}>
         <Typography color="inherit" variant="h2">
           Sobre mi
         </Typography>
@@ -35,5 +23,3 @@ const About = () => {
     </Box>
   )
 }
-
-export default About
