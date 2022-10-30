@@ -7,6 +7,11 @@ const overrides: ThemeOptions['components'] = {
       variant: 'filled',
     },
   },
+  MuiAlert: {
+    defaultProps: {
+      variant: 'filled',
+    }
+  }
 }
 
 const theme = createTheme({

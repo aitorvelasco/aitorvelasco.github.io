@@ -170,11 +170,11 @@ export default function ContactForm() {
           onClose={() => setOpen(false)}
         >
           {statusOk ? (
-            <Alert variant="filled" severity="success">
+            <Alert severity="success">
               Formulario enviado. ¡Pronto nos pondremos en contacto!
             </Alert>
           ) : (
-            <Alert variant="filled" severity="error">
+            <Alert severity="error">
               Se ha producido un error en el envío de los datos.
             </Alert>
           )}
