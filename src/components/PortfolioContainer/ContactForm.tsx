@@ -157,7 +157,7 @@ export default function ContactForm() {
             )}
           />
           <Box display="flex" justifyContent="center" py={2}>
-            <Button disabled={disable} color="secondary" type="submit">
+            <Button disabled={disable} color="secondary" variant="contained" type="submit">
               Enviar
             </Button>
           </Box>
