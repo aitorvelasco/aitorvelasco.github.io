@@ -5,56 +5,32 @@ import {
   Typography,
 } from '@mui/material'
 
-import { makeStyles } from '@mui/styles'
-
 import { works } from '../../data'
 
-const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
-  section: {
-    scrollMarginTop: '68px',
-    paddingTop: spacing(2),
-    paddingBottom: spacing(2),
-  },
-  portfolio: {
-    display: 'grid',
-    gap: 8,
-    gridTemplateColumns: '1fr',
-    [breakpoints.up('md')]: {
-      gridTemplateColumns: '1fr 1fr',
-    },
-  },
-  infoBox: {
-    position: 'relative',
-    '& img': {
-      width: '100%',
-    },
-    '&:hover $info': {
-      transition: '.3s',
-      visibility: 'visible',
-      backgroundColor: palette.grey[500],
-      opacity: 0.95,
-    },
-  },
-  info: {
-    display: 'flex',
-    flexFlow: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    bottom: 0,
-    right: 0,
-    visibility: 'hidden',
-  },
-}))
-
 const Work = ({ src, name, description, url }) => {
-  const { infoBox, info } = useStyles()
   return (
-    <Box className={infoBox}>
+    <Box position="relative" sx={{ 
+      '& img': { width: 1},
+      '&:hover .info-box': {
+        transition: '.3s',
+        visibility: 'visible',
+        backgroundColor: ({ palette }) => palette.grey[500],
+        opacity: 0.95,
+      },
+      }}>
       <img src={src} alt={name} />
-      <Box className={info}>
+      <Box 
+        display="flex" 
+        justifyContent="center" 
+        alignItems="center" 
+        position="absolute"
+        left={0}
+        right={0}        
+        top={0}        
+        bottom={0}
+        visibility="hidden"
+        className="info-box"
+      >
         <Box
           display="flex"
           flexDirection="column"
@@ -75,16 +51,16 @@ const Work = ({ src, name, description, url }) => {
   )
 }
 
-const Portfolio = () => {
-  const { section, portfolio } = useStyles()
+export default function Portfolio () {
   return (
-    <Box bgcolor="grey.500" color="white">
-      <Container maxWidth="md" id="portfolio" className={section}>
+    <Box bgcolor="grey.500" color="common.white">
+      <Container maxWidth="md" id="portfolio" sx={{ scrollMarginTop: 68, py: 2 }}>
         <Typography align="center" variant="h2">
           Portfolio
         </Typography>
       </Container>
-      <Box className={portfolio} my={2}>
+
+      <Box display="grid" gap={1} gridTemplateColumns={{xs: '1fr', md: '1fr 1fr'}} my={2}>
         {works.map(({ src, name, description, url }) => (
           <Work
             key={name}
@@ -101,5 +77,3 @@ const Portfolio = () => {
     </Box>
   )
 }
-
-export default Portfolio

@@ -1,21 +1,9 @@
-import { Box, Typography } from '@mui/material'
-import { makeStyles } from '@mui/styles'
+import { Box, BoxProps, Typography } from '@mui/material'
 
-const useStyles = makeStyles(() => ({
-  name: {
-    fontSize: '116px',
-    textTransform: 'uppercase',
-    writingMode: 'vertical-lr',
-    textOrientation: 'upright',
-    lineHeight: 1.3,
-  },
-}))
-
-const Aside = () => {
-  const { name } = useStyles()
+export default function Aside (boxProps: BoxProps) {
   return (
-    <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
-      <Typography component="h1" className={name}>Aitor&nbsp;Velasco</Typography>
+    <Box {...boxProps}>
+      <Typography component="h1" sx={{ fontSize: 116, textTransform: 'uppercase', writingMode: 'vertical-lr', textOrientation: 'upright', lineHeight: 1.3}} >Aitor&nbsp;Velasco</Typography>
 
       <Typography component="p" variant="caption">
         Aitor Velasco
@@ -29,5 +17,3 @@ const Aside = () => {
     </Box>
   )
 }
-
-export default Aside

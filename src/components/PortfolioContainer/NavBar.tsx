@@ -11,30 +11,7 @@ import {
   useTheme,
 } from '@mui/material'
 
-import { makeStyles } from '@mui/styles'
-
 import { MenuIcon } from '../assets'
-
-const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
-  navBar: (scrolled) => ({
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: scrolled ? spacing(0) : spacing(2),
-    backgroundColor: scrolled ? palette.common.white : 'transparent',
-    transition: '0.25s',
-    justifyContent: 'space-between',
-  }),
-  navBarItems: {
-    display: 'flex',
-    [breakpoints.up('md')]: {
-      gap: spacing(5),
-    },
-  },
-  auxToolbar: {
-    justifyContent: 'space-between',
-  },
-}))
 
 const MenuItems = ({ mobile = false, top = true, handleOpen }) => {
   return (
@@ -91,23 +68,31 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => {
   </>
 )}
 
-const NavBar = () => {
+function HasScrolled() {
+  return useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 64,
+  })
+}
+
+export default function NavBar() {
   const [open, setOpen] = useState(false)
 
-  function HasScrolled() {
-    return useScrollTrigger({
-      disableHysteresis: true,
-      threshold: 64,
-    })
-  }
-  const theme = useTheme()
-  const downMd = useMediaQuery(theme.breakpoints.down('md'))
-
-  const { navBar, navBarItems, auxToolbar } = useStyles(HasScrolled())
+  const { breakpoints } = useTheme()
+  const downMd = useMediaQuery(breakpoints.down('md'))
 
   return (
     <AppBar color="transparent">
-      <Toolbar className={navBar}>
+      <Toolbar sx={{
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        transition: '0.25s',
+        justifyContent: 'space-between',
+        top: HasScrolled() ? 0 : 2,
+        backgroundColor: HasScrolled() ? 'white' : 'transparent',
+      }}
+      >
         <Button onClick={() => document.getElementById('hero').scrollIntoView()}>
           <img
             src="/logo-t.webp"
@@ -116,7 +101,7 @@ const NavBar = () => {
             height={50}
           />
         </Button>
-        <Box className={navBarItems}>
+        <Box display="flex" gap={{ md: 5 }}>
           {downMd ? (
             <>
             <Button aria-label="menu" onClick={() => setOpen(!open)}>
@@ -128,7 +113,7 @@ const NavBar = () => {
               open={open}
               onClose={() => setOpen(false)}
             >
-              <Toolbar className={auxToolbar}>
+              <Toolbar sx={{ justifyContent: 'space-between' }}>
                 <Button onClick={() => {
                   document.getElementById('hero').scrollIntoView() 
                   setOpen(false) 
@@ -154,5 +139,3 @@ const NavBar = () => {
     </AppBar>
   )
 }
-
-export default NavBar

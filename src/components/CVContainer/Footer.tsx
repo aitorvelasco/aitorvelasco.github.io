@@ -1,28 +1,15 @@
-import { Box } from '@mui/material'
-import { makeStyles } from '@mui/styles'
+import { Box, BoxProps } from '@mui/material'
 
-const useStyles = makeStyles(() => ({
-  logo: {
-    transform: 'translateY(-50%)',
-    border: '4px solid !important',
-    borderRadius: '50%',
-    overflow: 'auto !important'
-  },
-}))
-
-const Footer = () => {
-  const { logo } = useStyles()
+export default function Footer(boxProps: BoxProps) {
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      mt={8.5}
-      bgcolor="black"
-      height="150px"
-    >
+    <Box {...boxProps} sx={{
+      '& img': {
+        transform: 'translateY(-50%)',
+        border: '2px solid',
+        borderRadius: 50,
+      }
+    }}>
       <img
-        className={logo}
         src="/logo-w.webp"
         alt="Aitor Velasco - Senior Front End Developer"
         width={150}
@@ -31,5 +18,3 @@ const Footer = () => {
     </Box>
   )
 }
-
-export default Footer
