@@ -1,8 +1,19 @@
-import { createTheme } from '@mui/material'
+import { createTheme, ThemeOptions } from '@mui/material'
 import globalStyles from './globalStyles'
+
+const overrides: ThemeOptions['components'] = {
+  MuiTextField: {
+    defaultProps: {
+      variant: 'filled',
+    },
+  },
+}
 
 const theme = createTheme({
     ...globalStyles,
+    components: {
+      ...overrides,
+    },
     palette: {
       primary: {
         main: '#4298e2',

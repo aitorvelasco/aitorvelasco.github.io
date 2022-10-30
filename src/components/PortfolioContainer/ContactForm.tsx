@@ -92,7 +92,6 @@ export default function ContactForm() {
                 {...field}
                 fullWidth
                 margin="normal"
-                variant="outlined"
                 label="Nombre"
                 placeholder="Nombre"
                 error={!!errors.name}
@@ -110,7 +109,6 @@ export default function ContactForm() {
                 {...field}
                 fullWidth
                 margin="normal"
-                variant="outlined"
                 label="Email"
                 placeholder="Email"
                 error={!!errors.email}
@@ -129,7 +127,6 @@ export default function ContactForm() {
                 {...field}
                 fullWidth
                 margin="normal"
-                variant="outlined"
                 type="tel"
                 inputProps={{ maxLength: 9 }}
                 label="Teléfono"
@@ -149,7 +146,6 @@ export default function ContactForm() {
                 {...field}
                 fullWidth
                 margin="normal"
-                variant="outlined"
                 multiline
                 minRows={5}
                 label="Mensaje"
@@ -161,7 +157,7 @@ export default function ContactForm() {
             )}
           />
           <Box display="flex" justifyContent="center" py={2}>
-            <Button disabled={disable} color="secondary" type="submit" variant="contained">
+            <Button disabled={disable} color="secondary" type="submit">
               Enviar
             </Button>
           </Box>
