@@ -55,7 +55,7 @@ export default function ContactForm() {
     control,
     reset,
     formState,
-  } = useForm<any>({
+  } = useForm<Inputs>({
     resolver: yupResolver(schema),
   })
 
