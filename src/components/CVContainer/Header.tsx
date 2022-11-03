@@ -12,7 +12,7 @@ export default function Header() {
         height: 300,
         mb: { sx: -17, lg: -4.5 },
         background: { xs: `linear-gradient(0, white 50%, black 50%)`, lg: `linear-gradient(16.8deg, white 50%, black 50%)` },
-        '& a img': {
+        '& img': {
           border: '4px solid black',
           borderRadius: 50,
         }
