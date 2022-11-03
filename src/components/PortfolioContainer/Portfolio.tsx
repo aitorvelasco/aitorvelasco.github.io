@@ -18,7 +18,10 @@ const Work = ({ src, name, description, url }) => {
         opacity: 0.95,
       },
       }}>
-      <img src={src} alt={name} />
+      <picture>
+        <source srcSet={src} type="image/webp" />
+        <img src={src} alt={name} />
+      </picture>
       <Box 
         display="flex" 
         justifyContent="center" 
