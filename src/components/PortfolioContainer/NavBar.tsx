@@ -11,6 +11,8 @@ import {
   useTheme,
 } from '@mui/material'
 
+import Image from 'next/image'
+
 import { MenuIcon } from '../assets'
 
 const MenuItems = ({ mobile = false, top = true, handleOpen }) => {
@@ -94,7 +96,7 @@ export default function NavBar() {
       }}
       >
         <Button onClick={() => document.getElementById('hero').scrollIntoView()}>
-          <img
+          <Image
             src="/logo-t.webp"
             alt="Aitor Velasco - Front End Developer"
             width={50}
@@ -118,7 +120,7 @@ export default function NavBar() {
                   document.getElementById('hero').scrollIntoView() 
                   setOpen(false) 
                   }}>
-                  <img
+                  <Image
                     src="/logo-t.webp"
                     alt="Aitor Velasco - Front End Developer"
                     width={50}

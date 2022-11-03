@@ -1,5 +1,7 @@
 import { Box, Typography, Link } from '@mui/material'
 
+import Image from 'next/image'
+
 import { LinkedInIcon, GithubIcon, EmailIcon } from '../assets'
 
 export default function Hero() {
@@ -51,7 +53,7 @@ export default function Hero() {
           </Link>
         </Box>
       </Box>
-      <img
+      <Image
         alt="me"
         width={150}
         height={150}
