@@ -58,15 +58,16 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => {
     >
       Contacto
     </Button>
-    <Link href="/curriculum" passHref>
-      <Button
-        variant={mobile ? 'contained' : 'outlined'}
-        color={top || mobile ? 'secondary' : 'primary'}
-        onClick={() => handleOpen(false)}
-      >
-      Ver CV
-      </Button>
-    </Link>
+    <Button
+      variant={mobile ? 'contained' : 'outlined'}
+      color={top || mobile ? 'secondary' : 'primary'}
+      onClick={() => handleOpen(false)}
+      sx={{ 'a': { textDecoration: 'none', color: 'inherit'}}}
+    >
+      <Link href="/curriculum" passHref>
+        Ver CV
+      </Link>
+    </Button>
   </>
 )}
 
