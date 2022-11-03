@@ -5,12 +5,14 @@ import {
   Typography,
 } from '@mui/material'
 
+import Image from 'next/image'
+
 import { works } from '../../data'
 
 const Work = ({ src, name, description, url }) => {
   return (
     <Box position="relative" sx={{ 
-      '& img': { width: 1},
+      '& img': { },
       '&:hover .info-box': {
         transition: '.3s',
         visibility: 'visible',
@@ -18,7 +20,8 @@ const Work = ({ src, name, description, url }) => {
         opacity: 0.95,
       },
       }}>
-      <img src={src} alt={name} />
+      <Image layout="fill"
+    objectFit="cover" src={src} alt={name} />
       <Box 
         display="flex" 
         justifyContent="center" 
