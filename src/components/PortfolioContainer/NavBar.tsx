@@ -36,7 +36,7 @@ const MenuItems = ({ mobile = false, top = true, handleOpen }) => {
         document.getElementById('skills').scrollIntoView()
       }}
     >
-      Habilidades
+      Stack
     </Button>
     <Button
       variant="text"

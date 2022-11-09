@@ -1,12 +1,11 @@
 import { Box, Typography, Link } from '@mui/material'
 
-import { skills } from '../../data'
-import { futureSkills } from '../../data/skills.data'
+import { skills, futureSkills } from '../../data'
 
 export default function Skills() {
   return (
     <>
-      <Typography variant="h2">Habilidades</Typography>
+      <Typography variant="h2">Stack</Typography>
       <Typography paragraph>
         Estas son algunas de las herramientas con las que he trabajado en los
         últimos años:

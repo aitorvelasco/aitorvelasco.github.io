@@ -103,7 +103,7 @@ const skills: skill[] = [
 ]
 
 
-export const futureSkills: skill[] = [
+const futureSkills: skill[] = [
   {
     name: 'Nx',
     icon: <NxIcon />,
@@ -116,4 +116,7 @@ export const futureSkills: skill[] = [
   },
 ]
 
-export default skills
+export {
+  skills,
+  futureSkills 
+}
