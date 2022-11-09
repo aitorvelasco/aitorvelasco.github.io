@@ -16,6 +16,7 @@ import {
   StorybookIcon,
   StyledComponentsIcon,
   TsIcon,
+  TestingLibraryIcon,
 } from '../components/assets'
 
 interface skill {
@@ -94,6 +95,11 @@ const skills: skill[] = [
     name: 'Jest',
     icon: <JestIcon />,
     url: 'https://jestjs.io',
+  },
+  {
+    name: 'React Testing Library',
+    icon: <TestingLibraryIcon />,
+    url: 'https://testing-library.com',
   },
   {
     name: 'Cypress',

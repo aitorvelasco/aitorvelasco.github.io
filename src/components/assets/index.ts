@@ -18,6 +18,7 @@ import ReduxIcon from './redux.svg'
 import SassIcon from './sass.svg'
 import StorybookIcon from './sb.svg'
 import StyledComponentsIcon from './sc.svg'
+import TestingLibraryIcon from './testing-library.svg'
 import TsIcon from './ts.svg'
 
 export {
@@ -41,5 +42,6 @@ export {
   SassIcon,
   StorybookIcon,
   StyledComponentsIcon,
-  TsIcon
+  TsIcon,
+  TestingLibraryIcon
 }
