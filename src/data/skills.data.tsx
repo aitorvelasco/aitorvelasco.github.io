@@ -1,66 +1,118 @@
 import {
-  Html5Icon,
   Css3Icon,
+  CypressIcon,
+  FormikIcon,
   GitIcon,
+  HookFormIcon,
+  Html5Icon,
   JestIcon,
   JsIcon,
   MuiIcon,
   NextJsIcon,
+  NxIcon,
   ReactIcon,
+  ReduxIcon,
   SassIcon,
   StorybookIcon,
   StyledComponentsIcon,
   TsIcon,
 } from '../components/assets'
 
-const skills = [
+interface skill {
+  name: string
+  icon: JSX.Element
+  url: string
+}
+
+const skills: skill[] = [
   {
     name: 'HTML5',
-    img: <Html5Icon />,
+    icon: <Html5Icon />,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/html',
   },
   {
     name: 'CSS3',
-    img: <Css3Icon />,
-  },
-  {
-    name: 'Sass',
-    img: <SassIcon />,
+    icon: <Css3Icon />,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/css',
   },
   {
     name: 'Javascript ES6+',
-    img: <JsIcon />,
-  },
-  {
-    name: 'Typescript',
-    img: <TsIcon />,
-  },
-  {
-    name: 'React',
-    img: <ReactIcon />,
-  },
-  {
-    name: 'NextJS',
-    img: <NextJsIcon />,
+    icon: <JsIcon />,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   },
   {
     name: 'Git',
-    img: <GitIcon />,
+    icon: <GitIcon />,
+    url: 'https://git-scm.com',
+  },
+  {
+    name: 'Typescript',
+    icon: <TsIcon />,
+    url: 'https://www.typescriptlang.org'
+  },
+  {
+    name: 'React',
+    icon: <ReactIcon />,
+    url: 'https://reactjs.org',
+  },
+  {
+    name: 'Redux',
+    icon: <ReduxIcon />,
+    url: 'https://es.redux.js.org',
+  },
+  {
+    name: 'NextJS',
+    icon: <NextJsIcon />,
+    url: 'https://nextjs.org',
+  },
+  {
+    name: 'Formik',
+    icon: <FormikIcon />,
+    url: 'https://formik.org',
+  },
+  {
+    name: 'Sass',
+    icon: <SassIcon />,
+    url: 'https://sass-lang.com/documentation',
   },
   {
     name: 'Material UI',
-    img: <MuiIcon />,
+    icon: <MuiIcon />,
+    url: 'https://mui.com',
   },
   {
     name: 'Styled-Components',
-    img: <StyledComponentsIcon />,
+    icon: <StyledComponentsIcon />,
+    url: 'https://styled-components.com',
   },
   {
     name: 'Storybook',
-    img: <StorybookIcon />,
+    icon: <StorybookIcon />,
+    url: 'https://storybook.js.org',
   },
   {
     name: 'Jest',
-    img: <JestIcon />,
+    icon: <JestIcon />,
+    url: 'https://jestjs.io',
+  },
+  {
+    name: 'Cypress',
+    icon: <CypressIcon />,
+    url: 'https://www.cypress.io',
+  },
+]
+
+
+export const futureSkills: skill[] = [
+  {
+    name: 'Nx',
+    icon: <NxIcon />,
+    url: 'https://nx.dev',
+  },
+  {
+    name: 'React Hook Form',
+    icon: <HookFormIcon />,
+    url: 'https://react-hook-form.com',
   },
 ]
 
