@@ -49,7 +49,6 @@ export default function ContactForm() {
   const [disable, setDisable] = useState(false)
   const [statusOk, setStatusOk] = useState(false)
 
-  // use Inputs interface should be works but it throws Typescript error, so temporary use any
   const {
     handleSubmit,
     control,
