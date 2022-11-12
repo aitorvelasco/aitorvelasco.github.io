@@ -20,14 +20,7 @@ export default class MyDocument extends Document {
           property="og:image"
           content="https://aitorvelasco.github.io/logo.jpg"
         />
-
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Josefin+Sans&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <Main />
       <NextScript />

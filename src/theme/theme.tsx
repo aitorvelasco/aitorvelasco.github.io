@@ -1,4 +1,5 @@
 import { createTheme, ThemeOptions } from '@mui/material'
+import { Josefin_Sans, Jomhuria as JomhuriaFont } from '@next/font/google'
 import globalStyles from './globalStyles'
 
 const overrides: ThemeOptions['components'] = {
@@ -13,6 +14,18 @@ const overrides: ThemeOptions['components'] = {
     }
   }
 }
+
+const JosefinSans = Josefin_Sans({
+  weight: ['400'],
+  subsets: ['latin'],
+  display: 'swap'
+})
+
+const Jomhuria = JomhuriaFont({
+  weight: ['400'],
+  subsets: ['latin'],
+  display: 'swap'
+})
 
 const theme = createTheme({
     ...globalStyles,
@@ -34,9 +47,9 @@ const theme = createTheme({
       }
     },
     typography: {
-      fontFamily: ['Josefin Sans', 'Jomhuria'].join(','),
+      fontFamily: [JosefinSans.style.fontFamily, Jomhuria.style.fontFamily].join(','),
       h1: {
-        fontFamily: 'Jomhuria',
+        fontFamily: Jomhuria.style.fontFamily,
         fontSize: '48px',
         lineHeight: 0.75,
         '@media (min-width:992px)': {
@@ -44,14 +57,14 @@ const theme = createTheme({
         }
       },
       h2: {
-        fontFamily: 'Jomhuria',
+        fontFamily: Jomhuria.style.fontFamily,
         fontSize: '36px',
         '@media (min-width:992px)': {
           fontSize: '48px'
         }
       },
       h3: {
-        fontFamily: 'Jomhuria',
+        fontFamily: Jomhuria.style.fontFamily,
         fontSize: '30px',
         '@media (min-width:992px)': {
           fontSize: '36px'
