@@ -1,5 +1,5 @@
 export default async function sendEmail(data) {
-  const response = await fetch('https://desolate-beach-83923.herokuapp.com/send-email', {
+  const response = await fetch('https://mailer-9eoeqsr24-aitorvelasco.vercel.app/send-email', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
