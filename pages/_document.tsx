@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
         <meta property="og:url" content="https://aitorvelasco.github.io" />
         <meta
           property="og:image"
-          content="https://aitorvelasco.github.io/logo.jpg"
+          content="https://aitorvelasco.github.io/logo-t.webp"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
