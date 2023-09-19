@@ -1,5 +1,5 @@
 import { createTheme, ThemeOptions } from '@mui/material'
-import { Josefin_Sans, Jomhuria as JomhuriaFont } from '@next/font/google'
+import { Josefin_Sans, Jomhuria as JomhuriaFont } from 'next/font/google'
 import globalStyles from './globalStyles'
 
 const overrides: ThemeOptions['components'] = {
