@@ -1,5 +1,5 @@
+import AstroIcon from './astro.svg'
 import Css3Icon from './css3.svg'
-import CypressIcon from './cypress.svg'
 import EmailIcon from './email.svg'
 import FormikIcon from './formik.svg'
 import GithubIcon from './github.svg'
@@ -22,8 +22,8 @@ import TestingLibraryIcon from './testing-library.svg'
 import TsIcon from './ts.svg'
 
 export {
+  AstroIcon,
   Css3Icon,
-  CypressIcon,
   EmailIcon,
   FormikIcon,
   GithubIcon,

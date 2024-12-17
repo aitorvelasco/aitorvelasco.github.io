@@ -41,7 +41,7 @@ export default function Skills() {
         ))}
       </Box>
       <Typography paragraph>
-        Estoy empezando a incorporar a mi stack estas otras soluciones:
+        Estoy empezando a incorporar a mi stack estas otras herramientas:
       </Typography>
       <Box
         display="grid"

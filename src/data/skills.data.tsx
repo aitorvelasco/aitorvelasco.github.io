@@ -1,6 +1,6 @@
 import {
+  AstroIcon,
   Css3Icon,
-  CypressIcon,
   FormikIcon,
   GitIcon,
   HookFormIcon,
@@ -15,8 +15,8 @@ import {
   SassIcon,
   StorybookIcon,
   StyledComponentsIcon,
-  TsIcon,
   TestingLibraryIcon,
+  TsIcon,
 } from '../components/assets'
 
 interface skill {
@@ -67,6 +67,11 @@ const skills: skill[] = [
     url: 'https://nextjs.org',
   },
   {
+    name: 'Nx',
+    icon: <NxIcon />,
+    url: 'https://nx.dev',
+  },
+  {
     name: 'Formik',
     icon: <FormikIcon />,
     url: 'https://formik.org',
@@ -101,28 +106,23 @@ const skills: skill[] = [
     icon: <TestingLibraryIcon />,
     url: 'https://testing-library.com',
   },
-  {
-    name: 'Cypress',
-    icon: <CypressIcon />,
-    url: 'https://www.cypress.io',
-  },
 ]
 
 
 const futureSkills: skill[] = [
   {
-    name: 'Nx',
-    icon: <NxIcon />,
-    url: 'https://nx.dev',
-  },
-  {
     name: 'React Hook Form',
     icon: <HookFormIcon />,
     url: 'https://react-hook-form.com',
+  },
+  {
+    name: 'Astro',
+    icon: <AstroIcon />,
+    url: 'https://astro.build/',
   },
 ]
 
 export {
   skills,
-  futureSkills 
+  futureSkills
 }
