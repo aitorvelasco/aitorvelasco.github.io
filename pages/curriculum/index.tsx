@@ -1,5 +1,4 @@
-import { Container, Grid } from '@mui/material'
-import React from 'react'
+import { Container, GridLegacy as Grid } from '@mui/material'
 
 import { Aside, Curriculum, Footer, Header } from '../../src/components'
 

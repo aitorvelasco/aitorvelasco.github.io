@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <>
       <Typography variant="h2">Stack</Typography>
-      <Typography paragraph>
+      <Typography mb={4}>
         Estas son algunas de las herramientas con las que he trabajado en los
         últimos años:
       </Typography>
@@ -40,7 +40,7 @@ export default function Skills() {
           </Box>
         ))}
       </Box>
-      <Typography paragraph>
+      <Typography mb={4}>
         Estoy empezando a incorporar a mi stack estas otras herramientas:
       </Typography>
       <Box

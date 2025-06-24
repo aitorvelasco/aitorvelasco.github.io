@@ -23,7 +23,7 @@ export default function Experience() {
                 {site}
               </Link>
             </Typography>
-            <Typography paragraph align="justify">{description}</Typography>
+            <Typography mb={4} align="justify">{description}</Typography>
           </Fragment>
         )
       }
@@ -36,7 +36,7 @@ export default function Experience() {
             <Typography variant="h3">{school}</Typography>
             <Typography className="semibold" gutterBottom color="textPrimary">{degree}</Typography>
             <Typography color="secondary">{period}</Typography>
-            <Typography paragraph color="textSecondary">
+            <Typography mb={4} color="textSecondary">
               <Link
                 href={site}
                 target="_blank"
