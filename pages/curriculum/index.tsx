@@ -1,4 +1,4 @@
-import { Container, GridLegacy as Grid } from '@mui/material'
+import { Container, Grid } from '@mui/material'
 
 import { Aside, Curriculum, Footer, Header } from '../../src/components'
 
@@ -8,11 +8,16 @@ export default function Home() {
       <Container maxWidth="lg" disableGutters sx={{ boxShadow: '-10px 10px', bgcolor: 'white', overflow: 'hidden', my: 4}}>
       <Header />
       <Container maxWidth={false}>
-        <Grid container spacing={4}>
-            <Grid item xs={2}>
-              <Aside display={{ xs: 'none', lg: 'block' }} />
-            </Grid>
-          <Grid item lg={9}>
+        <Grid
+          columnGap={1}
+          display="grid"
+          gridTemplateColumns={{ xs: '1fr', lg: '2fr 9fr'}}
+        >
+          <Grid display={{ xs: 'none', lg: 'block' }}>
+            <Aside />
+          </Grid>
+
+          <Grid>
             <Curriculum />
           </Grid>
         </Grid>
