@@ -21,7 +21,7 @@ export default function AboutMe() {
         MasMovil, Yoigo y LlamaYa, liderando proyectos estratégicos y mejorando la experiencia del usuario en sus
         plataformas digitales.
       </Typography><Typography paragraph align="justify">
-        Actualmente, desempeño mi labor como eShop Frontend Leader en MASORANGE, donde continúo siendo responsable de
+        Actualmente, desempeño mi labor como Senior FrontEnd Developer en MASORANGE, donde continúo siendo responsable de
         las áreas públicas de marcas como MasMovil, Yoigo y LlamaYa, además de gestionar las plataformas de Euskaltel,
         Guuk, R, Racctel, Telecable y Lebara. Mi objetivo es ofrecer soluciones innovadoras que impulsen la presencia
         digital y mejoren la experiencia del cliente en cada interacción.

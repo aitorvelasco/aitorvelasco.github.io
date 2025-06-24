@@ -19,7 +19,7 @@ interface studies {
 const experience: experience[] = [
   {
     company: 'Grupo MASORANGE',
-    role: 'Eshop FrontEnd Leader',
+    role: 'Senior FrontEnd Developer',
     period: 'Abril 2024 - Actualidad',
     site: 'https://masorange.es',
     description: `Continuando con el stack de las marcas nacionales del Grupo Masmovil, añadimos las marcas
