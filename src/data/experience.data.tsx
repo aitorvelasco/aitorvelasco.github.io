@@ -1,4 +1,5 @@
 import { Link, Typography } from "@mui/material"
+import { JSX } from "react"
 
 interface experience {
   company: string

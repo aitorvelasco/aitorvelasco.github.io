@@ -11,38 +11,25 @@ import {
 } from '@mui/material'
 
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
+import { zodResolver } from '@hookform/resolvers/zod'
+import * as z from "zod"
 
 import { sendEmail } from '../../services'
 
 const PHONE_REGEX = /^[6|7|8|9][0-9]{8}$/
 
-const schema = yup.object().shape({
-  name: yup
-    .string()
-    .min(3, 'El nombre y apellido debe tener más de 3 letras')
-    .required(),
-  email: yup.string().email('Debes introducir un email válido').required(),
-  phone: yup
-    .string()
-    .test(
-      'phone',
-      'Tu número de teléfono no es válido o está incompleto',
-      (phone) => !phone || PHONE_REGEX.test(phone)
-    ),
-  message: yup
-    .string()
-    .min(3, 'El mensaje debe ser más largo. ¡Cuéntame!')
-    .required(),
+const schema = z.object({
+  name: z.string().min(3, 'El nombre y apellido debe tener más de 3 letras'),
+  email: z.email('Debes introducir un email válido'),
+  phone: z.string().optional()
+  .refine(
+    (phone) => !phone || PHONE_REGEX.test(phone),
+    { message: 'Tu número de teléfono no es válido o está incompleto' }
+  ),
+  message: z.string().min(3, 'El mensaje debe ser más largo. ¡Cuéntame!'),
 })
 
-interface Inputs {
-  name: string
-  email: string
-  phone: string
-  message: string
-}
+type Inputs = z.infer<typeof schema>
 
 export default function ContactForm() {
   const [open, setOpen] = useState(false)
@@ -55,7 +42,7 @@ export default function ContactForm() {
     reset,
     formState,
   } = useForm<Inputs>({
-    resolver: yupResolver(schema),
+    resolver: zodResolver(schema),
   })
 
   const { errors } = formState
@@ -95,7 +82,6 @@ export default function ContactForm() {
                 placeholder="Nombre"
                 error={!!errors.name}
                 helperText={errors.name ? errors.name.message : ''}
-                required
               />
             )}
           />
@@ -112,7 +98,6 @@ export default function ContactForm() {
                 placeholder="Email"
                 error={!!errors.email}
                 helperText={errors.email ? errors.email.message : ''}
-                required
               />
             )}
           />
@@ -151,7 +136,6 @@ export default function ContactForm() {
                 placeholder="Mensaje"
                 error={!!errors.message}
                 helperText={errors.message ? errors.message.message : ''}
-                required
               />
             )}
           />
