@@ -56,13 +56,12 @@ El portfolio incluye 7 proyectos en diferentes categorías:
 
 ## Experiencia Profesional
 
-- **Senior FrontEnd Developer** @ MASORANGE (actualmente)
-- **Senior FrontEnd Developer** @ Grupo MASMOVIL
+- **Senior FrontEnd Developer** @ Orange España (antes Grupo MASMOVIL / MASORANGE) — actualmente
 - **FrontEnd Developer** @ BQ
 
 ## Tech Stack
 
-- Astro 5.x
+- Astro 7.x
 - Tailwind CSS
 - TypeScript
 - Vite
