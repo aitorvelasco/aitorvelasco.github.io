@@ -33,7 +33,7 @@ export const websites: Website[] = [
     comprometer la calidad visual.`,
     category: "portfolio",
     color: "from-rose-500 to-amber-500",
-    image: "/images/websites/sm-foto.jpg",
+    image: "/images/websites/sm-foto.webp",
     tags: ["HTML5", "CSS3", "JS"],
     year: "2015",
     status: WebsiteStatus.completed,
@@ -56,7 +56,7 @@ export const websites: Website[] = [
     La arquitectura basada en Magento permitió escalar el catálogo y manejar alto tráfico durante campañas promocionales.`,
     category: "E-commerce",
     color: "from-emerald-500 to-cyan-500",
-    image: "/images/websites/bq-store.png",
+    image: "/images/websites/bq-store.webp",
     tags: ["Magento", "jQuery"],
     year: "2016",
     status: WebsiteStatus.completed,
@@ -79,7 +79,7 @@ export const websites: Website[] = [
     El diseño responsive garantiza una experiencia óptima tanto en escritorio como en dispositivos móviles.`,
     category: "Blog",
     color: "from-slate-500 to-zinc-500",
-    image: "/images/websites/diwo.png",
+    image: "/images/websites/diwo.webp",
     tags: ["Wordpress", "poedit"],
     year: "2017",
     status: WebsiteStatus.completed,
@@ -102,7 +102,7 @@ export const websites: Website[] = [
     El diseño dinámico permite actualizar secciones promocionales sin necesidad de desarrollo adicional.`,
     category: "website",
     color: "from-orange-500 to-yellow-500",
-    image: "/images/websites/bqcom.png",
+    image: "/images/websites/bqcom.webp",
     tags: ["Twig", "SEO"],
     year: "2018",
     status: WebsiteStatus.completed,
@@ -113,7 +113,7 @@ export const websites: Website[] = [
     ]
   },
   {
-    id: "eshop-llamaya",
+    id: "eshop-old-llamaya",
     title: "llamaya eShop",
     short_description: "Tienda online de la marca llamaya",
     long_description: `Desarrollo de tienda online para llamaya, marca de telecomunicaciones del grupo MASMOVIL. 
@@ -124,17 +124,16 @@ export const websites: Website[] = [
     El diseño sigue las guidelines de marca mientras optimiza la experiencia de usuario para maximizar conversiones.`,
     category: "eshop",
     color: "from-red-500 to-pink-500",
-    image: "/images/websites/llamaya.png",
+    image: "/images/websites/old-llamaya.webp",
     tags: ["React", "NextJS", "Material UI"],
     year: "2019",
-    status: WebsiteStatus.ongoing,
+    status: WebsiteStatus.completed,
     features: [
       "Configurador interactivo de tarifas",
       "Integración con sistemas de provisioning",
       "Gestión de portabilidades en tiempo real",
       "Flujos de compra optimizados para conversión"
-    ],
-    href: "https://www.llamaya.com",
+    ]
   },
   {
     id: "eshop-masmovil",
@@ -148,7 +147,7 @@ export const websites: Website[] = [
     El diseño mobile-first responde a que más del 70% del tráfico proviene de dispositivos móviles.`,
     category: "eshop",
     color: "from-blue-500 to-indigo-500",
-    image: "/images/websites/masmovil.png",
+    image: "/images/websites/masmovil.webp",
     tags: ["React", "NextJS", "Material UI"],
     year: "2020",
     status: WebsiteStatus.ongoing,
@@ -172,7 +171,7 @@ export const websites: Website[] = [
     mínimos pasos, implementando validación en tiempo real y sugerencias personalizadas basadas en el uso del cliente.`,
     category: "eshop",
     color: "from-violet-500 to-purple-500",
-    image: "/images/websites/yoigo.png",
+    image: "/images/websites/yoigo.webp",
     tags: ["React", "NextJS", "Material UI"],
     year: "2021",
     status: WebsiteStatus.ongoing,
@@ -183,5 +182,197 @@ export const websites: Website[] = [
       "Sugerencias personalizadas basadas en uso"
     ],
     href: "https://www.yoigo.com",
-  }
+  },
+  {
+    id: "eshop-euskaltel",
+    title: "Euskaltel eShop",
+    short_description: "Tienda online de la marca Euskaltel",
+    long_description: `Desarrollo de tienda online para Euskaltel, marca de telecomunicaciones del grupo MASMOVIL. 
+    El proyecto consistió en crear una experiencia de compra moderna y diferenciada, con especial atención 
+    a la simplificación del proceso de contratación de tarifas y dispositivos.`,
+    extra_long_description: `Se implementó un diseño visual distintivo que refleja la personalidad joven de la marca, 
+    con animaciones suaves y micro-interacciones que mejoran el engagement. El proceso de compra se redujo a 
+    mínimos pasos, implementando validación en tiempo real y sugerencias personalizadas basadas en el uso del cliente.`,
+    category: "eshop",
+    color: "from-violet-500 to-purple-500",
+    image: "/images/websites/euskaltel.webp",
+    tags: ["React", "NextJS", "Material UI"],
+    year: "2023",
+    status: WebsiteStatus.ongoing,
+    features: [
+      "Diseño visual distintivo y diferenciado",
+      "Proceso de compra simplificado",
+      "Micro-interacciones para mayor engagement",
+      "Sugerencias personalizadas basadas en uso"
+    ],
+    href: "https://www.euskaltel.com",
+  },
+  {
+    id: "eshop-guuk",
+    title: "Guuk eShop",
+    short_description: "Tienda online de la marca Guuk",
+    long_description: `Desarrollo de tienda online para Guuk, marca de telecomunicaciones del grupo MASMOVIL. 
+    El proyecto consistió en crear una experiencia de compra moderna y diferenciada, con especial atención 
+    a la simplificación del proceso de contratación de tarifas y dispositivos.`,
+    extra_long_description: `Se implementó un diseño visual distintivo que refleja la personalidad joven de la marca, 
+    con animaciones suaves y micro-interacciones que mejoran el engagement. El proceso de compra se redujo a 
+    mínimos pasos, implementando validación en tiempo real y sugerencias personalizadas basadas en el uso del cliente.`,
+    category: "eshop",
+    color: "from-violet-500 to-purple-500",
+    image: "/images/websites/guuk.webp",
+    tags: ["React", "NextJS", "Material UI"],
+    year: "2023",
+    status: WebsiteStatus.ongoing,
+    features: [
+      "Diseño visual distintivo y diferenciado",
+      "Proceso de compra simplificado",
+      "Micro-interacciones para mayor engagement",
+      "Sugerencias personalizadas basadas en uso"
+    ],
+    href: "https://www.guuk.com",
+  },
+  {
+    id: "eshop-r",
+    title: "R eShop",
+    short_description: "Tienda online de la marca R",
+    long_description: `Desarrollo de tienda online para R, marca de telecomunicaciones del grupo MASMOVIL. 
+    El proyecto consistió en crear una experiencia de compra moderna y diferenciada, con especial atención 
+    a la simplificación del proceso de contratación de tarifas y dispositivos.`,
+    extra_long_description: `Se implementó un diseño visual distintivo que refleja la personalidad joven de la marca, 
+    con animaciones suaves y micro-interacciones que mejoran el engagement. El proceso de compra se redujo a 
+    mínimos pasos, implementando validación en tiempo real y sugerencias personalizadas basadas en el uso del cliente.`,
+    category: "eshop",
+    color: "from-violet-500 to-purple-500",
+    image: "/images/websites/rcable.webp",
+    tags: ["React", "NextJS", "Material UI"],
+    year: "2023",
+    status: WebsiteStatus.ongoing,
+    features: [
+      "Diseño visual distintivo y diferenciado",
+      "Proceso de compra simplificado",
+      "Micro-interacciones para mayor engagement",
+      "Sugerencias personalizadas basadas en uso"
+    ],
+    href: "https://www.mundo-r.com",
+  },
+  {
+    id: "eshop-racctel",
+    title: "Racctel+ eShop",
+    short_description: "Tienda online de la marca Racctel+",
+    long_description: `Desarrollo de tienda online para Racctel+, marca de telecomunicaciones del grupo MASMOVIL. 
+    El proyecto consistió en crear una experiencia de compra moderna y diferenciada, con especial atención 
+    a la simplificación del proceso de contratación de tarifas y dispositivos.`,
+    extra_long_description: `Se implementó un diseño visual distintivo que refleja la personalidad joven de la marca, 
+    con animaciones suaves y micro-interacciones que mejoran el engagement. El proceso de compra se redujo a 
+    mínimos pasos, implementando validación en tiempo real y sugerencias personalizadas basadas en el uso del cliente.`,
+    category: "eshop",
+    color: "from-violet-500 to-purple-500",
+    image: "/images/websites/racctel.webp",
+    tags: ["React", "NextJS", "Material UI"],
+    year: "2023",
+    status: WebsiteStatus.ongoing,
+    features: [
+      "Diseño visual distintivo y diferenciado",
+      "Proceso de compra simplificado",
+      "Micro-interacciones para mayor engagement",
+      "Sugerencias personalizadas basadas en uso"
+    ],
+    href: "https://www.racctelplus.cat",
+  },
+  {
+    id: "eshop-telecable",
+    title: "Telecable eShop",
+    short_description: "Tienda online de la marca Telecable",
+    long_description: `Desarrollo de tienda online para Telecable, marca de telecomunicaciones del grupo MASMOVIL. 
+    El proyecto consistió en crear una experiencia de compra moderna y diferenciada, con especial atención 
+    a la simplificación del proceso de contratación de tarifas y dispositivos.`,
+    extra_long_description: `Se implementó un diseño visual distintivo que refleja la personalidad joven de la marca, 
+    con animaciones suaves y micro-interacciones que mejoran el engagement. El proceso de compra se redujo a 
+    mínimos pasos, implementando validación en tiempo real y sugerencias personalizadas basadas en el uso del cliente.`,
+    category: "eshop",
+    color: "from-violet-500 to-purple-500",
+    image: "/images/websites/telecable.webp",
+    tags: ["React", "NextJS", "Material UI"],
+    year: "2023",
+    status: WebsiteStatus.ongoing,
+    features: [
+      "Diseño visual distintivo y diferenciado",
+      "Proceso de compra simplificado",
+      "Micro-interacciones para mayor engagement",
+      "Sugerencias personalizadas basadas en uso"
+    ],
+    href: "https://www.telecable.es",
+  },
+  {
+    id: "eshop-lebara",
+    title: "Lebara eShop",
+    short_description: "Tienda online de la marca Lebara",
+    long_description: `Desarrollo de tienda online para Lebara, marca de telecomunicaciones del grupo MASMOVIL. 
+    El proyecto consistió en crear una experiencia de compra moderna y diferenciada, con especial atención 
+    a la simplificación del proceso de contratación de tarifas y dispositivos.`,
+    extra_long_description: `Se implementó un diseño visual distintivo que refleja la personalidad joven de la marca, 
+    con animaciones suaves y micro-interacciones que mejoran el engagement. El proceso de compra se redujo a 
+    mínimos pasos, implementando validación en tiempo real y sugerencias personalizadas basadas en el uso del cliente.`,
+    category: "eshop",
+    color: "from-violet-500 to-purple-500",
+    image: "/images/websites/lebara.webp",
+    tags: ["React", "NextJS", "Material UI"],
+    year: "2023",
+    status: WebsiteStatus.ongoing,
+    features: [
+      "Diseño visual distintivo y diferenciado",
+      "Proceso de compra simplificado",
+      "Micro-interacciones para mayor engagement",
+      "Sugerencias personalizadas basadas en uso"
+    ],
+    href: "https://www.lebaraspain.es",
+  },
+  {
+    id: "eshop-llamaya",
+    title: "Llamaya eShop",
+    short_description: "Tienda online de la marca Llamaya",
+    long_description: `Desarrollo de tienda online para Llamaya, marca de telecomunicaciones del grupo MASMOVIL. 
+    El proyecto consistió en crear una experiencia de compra moderna y diferenciada, con especial atención 
+    a la simplificación del proceso de contratación de tarifas y dispositivos.`,
+    extra_long_description: `Se implementó un diseño visual distintivo que refleja la personalidad joven de la marca, 
+    con animaciones suaves y micro-interacciones que mejoran el engagement. El proceso de compra se redujo a 
+    mínimos pasos, implementando validación en tiempo real y sugerencias personalizadas basadas en el uso del cliente.`,
+    category: "eshop",
+    color: "from-violet-500 to-purple-500",
+    image: "/images/websites/llamaya.webp",
+    tags: ["React", "NextJS", "Material UI"],
+    year: "2025",
+    status: WebsiteStatus.ongoing,
+    features: [
+      "Diseño visual distintivo y diferenciado",
+      "Proceso de compra simplificado",
+      "Micro-interacciones para mayor engagement",
+      "Sugerencias personalizadas basadas en uso"
+    ],
+    href: "https://www.llamaya.com",
+  },
+{
+    id: "eshop-jazztel",
+    title: "Jazztel eShop",
+    short_description: "Tienda online de la marca Jazztel",
+    long_description: `Desarrollo de tienda online para Jazztel, marca de telecomunicaciones del grupo MASORANGE. 
+    El proyecto consistió en crear una experiencia de compra moderna y diferenciada, con especial atención 
+    a la simplificación del proceso de contratación de tarifas y dispositivos.`,
+    extra_long_description: `Se implementó un diseño visual distintivo que refleja la personalidad joven de la marca, 
+    con animaciones suaves y micro-interacciones que mejoran el engagement. El proceso de compra se redujo a 
+    mínimos pasos, implementando validación en tiempo real y sugerencias personalizadas basadas en el uso del cliente.`,
+    category: "eshop",
+    color: "from-violet-500 to-purple-500",
+    image: "/images/websites/jazztel.webp",
+    tags: ["React", "NextJS", "Material UI"],
+    year: "2025",
+    status: WebsiteStatus.ongoing,
+    features: [
+      "Diseño visual distintivo y diferenciado",
+      "Proceso de compra simplificado",
+      "Micro-interacciones para mayor engagement",
+      "Sugerencias personalizadas basadas en uso"
+    ],
+    href: "https://www.jazztel.com",
+  },
 ];
