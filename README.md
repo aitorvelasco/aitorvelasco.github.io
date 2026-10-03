@@ -27,7 +27,7 @@ Portfolio personal profesional construido con [Astro](https://astro.build), dise
 │   │   ├── foto.webp
 │   │   ├── logo.webp
 │   │   └── websites/
-│   │       └── *.png
+│   │       └── *.webp
 ├── src/
 │   ├── data/
 │   │   └── websites.ts
@@ -62,7 +62,7 @@ El portfolio incluye 7 proyectos en diferentes categorías:
 ## Tech Stack
 
 - Astro 7.x
-- Tailwind CSS
+- Tailwind CSS 4.x
 - TypeScript
 - Vite
 
